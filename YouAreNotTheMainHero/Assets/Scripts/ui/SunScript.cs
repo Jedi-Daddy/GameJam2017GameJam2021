@@ -6,7 +6,7 @@ namespace Assets.Scripts.ui
     public class SunScript : MonoBehaviour
     {
         private float dissapearNumber = 1.5f;
-        private float Speed = 500f;
+        public float Speed = 800f;
         public int Key;
         private Vector3 DefaultPosition;
         private Vector3 ActivePosition;

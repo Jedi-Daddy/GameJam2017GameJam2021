@@ -675,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7863184f614618d4cb088505f321e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 3
+  Key: 2
   needAppearAnimation: 0
   needDissapearAnimation: 0
 --- !u!114 &490492651
@@ -949,7 +949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7863184f614618d4cb088505f321e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 4
+  Key: 3
   needAppearAnimation: 0
   needDissapearAnimation: 0
 --- !u!114 &1082188333
@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7863184f614618d4cb088505f321e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 6
+  Key: 5
   needAppearAnimation: 0
   needDissapearAnimation: 0
 --- !u!114 &1092056579
@@ -1347,7 +1347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7863184f614618d4cb088505f321e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 7
+  Key: 6
   needAppearAnimation: 0
   needDissapearAnimation: 0
 --- !u!114 &1161603697
@@ -1566,7 +1566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7863184f614618d4cb088505f321e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 1
+  Key: 0
   needAppearAnimation: 0
   needDissapearAnimation: 0
 --- !u!1 &1444978111
@@ -1798,7 +1798,7 @@ MonoBehaviour:
       - m_Target: {fileID: 2082994381}
         m_TargetAssemblyTypeName: Shadow, Assembly-CSharp
         m_MethodName: OnPointSelected
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2011,7 +2011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7863184f614618d4cb088505f321e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 5
+  Key: 4
   needAppearAnimation: 0
   needDissapearAnimation: 0
 --- !u!114 &1675298290
@@ -2191,7 +2191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7863184f614618d4cb088505f321e2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: 2
+  Key: 1
   needAppearAnimation: 0
   needDissapearAnimation: 0
 --- !u!114 &1980032550
