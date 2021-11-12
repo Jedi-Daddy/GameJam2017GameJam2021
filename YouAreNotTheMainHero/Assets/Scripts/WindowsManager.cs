@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Assets.Scripts;
 using UnityEngine.UI;
+using Assets.Scripts.ui;
 
 public class WindowsManager : MonoBehaviour
 {
@@ -107,7 +108,7 @@ public class WindowsManager : MonoBehaviour
         vp.Stop();
         Loading.active = false;
         Level1Ui.active = true;
-        Level1Ui.GetComponentInChildren<Sun>().enableListen = true;
+        Level1Ui.GetComponentInChildren<SunManager>().enableListen = true;
         //Scene level1 = SceneManager.GetSceneByName("level1");
         //SceneManager.SetActiveScene(level1);
     }
