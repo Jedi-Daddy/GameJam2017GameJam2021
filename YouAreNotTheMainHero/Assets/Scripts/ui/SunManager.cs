@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Assets.Scripts.ui
 {
@@ -33,6 +34,8 @@ namespace Assets.Scripts.ui
         public int startPosition = 1;
         public bool enableListen;
 
+        public UnityEvent<int> ShadowScript;
+
         void Start()
         {
             SunCollection = new Dictionary<int, SunScript>();
@@ -59,6 +62,7 @@ namespace Assets.Scripts.ui
                 SunCollection[currentPosition].Dissapear();
                 SunCollection[nextPosition].Appear();
                 currentPosition = nextPosition;
+                ShadowScript.Invoke(currentPosition);
             }
         }
 

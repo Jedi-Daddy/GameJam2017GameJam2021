@@ -109,31 +109,30 @@ public class WindowsManager : MonoBehaviour
         Loading.active = false;
         Level1Ui.active = true;
         Level1Ui.GetComponentInChildren<SunManager>().enableListen = true;
-        //Scene level1 = SceneManager.GetSceneByName("level1");
-        //SceneManager.SetActiveScene(level1);
     }
 
-    //public void LoadSceneMain(string sceneName)
-    //{
-    //    Loading.active = true;
-    //    var loadingVideo = Loading.GetComponentInChildren<VideoPlayer>();
-    //    var texture = new RenderTexture(1920, 1080, 1);
-    //    loadingVideo.targetTexture = texture;
-    //    loadingVideo.transform.parent.GetComponentInChildren<RawImage>().texture = texture;
-    //    loadingVideo.Play();
-    //    StartCoroutine(LoadScene(sceneName));
-    //    loadingVideo.Stop();
-    //    Loading.active = false;
-    //}
+    public void LoadSceneMain()
+    {
+        Logo.active = false;
+        currentLevel = 1;
+        Loading.active = true;
+        var loadingVideo = Loading.GetComponentInChildren<VideoPlayer>();
+        loadingVideo.Play();
+        StartCoroutine(LoadScene());
+        loadingVideo.Stop();
+        Loading.active = false;
+        Level1Ui.active = true;
+        Level1Ui.GetComponentInChildren<SunManager>().enableListen = true;
+    }
 
-    //public IEnumerator LoadScene()
-    //{
-    //    var asyncLoad = SceneManager.LoadSceneAsync("level1");
-    //    asyncLoad.allowSceneActivation = false;
-    //    while (!asyncLoad.isDone)
-    //    {
-    //        yield return null;
-    //    }
-    //}
+    public IEnumerator LoadScene()
+    {
+        var asyncLoad = SceneManager.LoadSceneAsync("level1");
+        //asyncLoad.allowSceneActivation = false;
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+    }
 
 }
