@@ -1,14 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.Video;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Assets.Scripts;
 using UnityEngine.UI;
 
 public class WindowsManager : MonoBehaviour
 {
     public GameObject Intro;
     public GameObject Logo;
-    public Scene Level1;
+    public GameObject Loading;
     public GameObject MenuRestart;
     public GameObject MenuNext;
     public GameObject GameEndWin;
@@ -23,9 +24,14 @@ public class WindowsManager : MonoBehaviour
         //    MenuNext.GetComponentInChildren<ButtonScriptExit>().ActionDelegate += ExitGame;
         //    MenuNext.GetComponentInChildren<ButtonScriptNext>().ActionDelegate += NextLevel;
 
-        Logo.GetComponentInChildren<ButtonScriptNext>().ActionDelegate += ShowLevel1;
+        Logo.GetComponentInChildren<ButtonScript>().ActionDelegate += ShowLevel1;
         Intro.active = true;
+        Logo.active = false;
+        Loading.active = false;
         var introVideo = Intro.GetComponentInChildren<VideoPlayer>();
+        var texture = new RenderTexture(1920, 1080, 1);
+        introVideo.targetTexture = texture;
+        introVideo.transform.parent.GetComponentInChildren<RawImage>().texture = texture;
         introVideo.Play();
         introVideo.loopPointReached += ShowLogo;
     }
@@ -62,8 +68,8 @@ public class WindowsManager : MonoBehaviour
     public void ShowLevel1()
     {
         Logo.active = false;
-        Level1.active = true;
         currentLevel = 1;
+        LoadSceneMain("level1");
     }
 
     //public void NextLevel()
@@ -84,4 +90,27 @@ public class WindowsManager : MonoBehaviour
     //            return;
     //    }
     //}
+
+    public void LoadSceneMain(string sceneName)
+    {
+        Loading.active = true;
+        var loadingVideo = Loading.GetComponentInChildren<VideoPlayer>();
+        var texture = new RenderTexture(1920, 1080, 1);
+        loadingVideo.targetTexture = texture;
+        loadingVideo.transform.parent.GetComponentInChildren<RawImage>().texture = texture;
+        loadingVideo.Play();
+        StartCoroutine(LoadScene(sceneName));
+        loadingVideo.Stop();
+        Loading.active = false;
+    }
+
+    public IEnumerator LoadScene(string sceneName)
+    {
+        var asyncLoad = SceneManager.LoadSceneAsync("level1");
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+    }
+
 }
