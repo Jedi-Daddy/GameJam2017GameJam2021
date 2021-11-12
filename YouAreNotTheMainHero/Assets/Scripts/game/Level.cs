@@ -36,6 +36,10 @@ public class Level : MonoBehaviour
     {
         var enemy = Instantiate(prefab);
         enemy.transform.position = NextSpawnPoint;
-        enemy.transform.LookAt(Target);
+        var lookTarget = new Vector3(
+            Target.position.x,
+            enemy.transform.position.y,
+            Target.position.z);
+        enemy.transform.LookAt(lookTarget);
     }
 }

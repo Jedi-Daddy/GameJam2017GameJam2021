@@ -63,8 +63,8 @@ public class WindowsManager : MonoBehaviour
     public void ShowLogo(VideoPlayer vp)
     {
         vp.Stop();
-        Intro.active = false;
-        Logo.active = true;
+        Intro.SetActive(false);
+        Logo.SetActive(true);
     }
 
     public void ShowLevel1()
