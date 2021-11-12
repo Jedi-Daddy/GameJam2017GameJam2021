@@ -7,10 +7,15 @@ public class Level1WindowManager : MonoBehaviour
     public GameObject Menu;
     void Start()
     {
-        //Menu.active = false; 
+        //Menu.active = false;
+        Menu.GetComponentInChildren<ButtonScriptExit>().ActionDelegate += ExitGame;
     }
     public void ShowMenu()
     {
         Menu.active = true;
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
