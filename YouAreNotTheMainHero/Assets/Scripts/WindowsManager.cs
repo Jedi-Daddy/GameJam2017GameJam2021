@@ -10,30 +10,26 @@ public class WindowsManager : MonoBehaviour
     public GameObject Intro;
     public GameObject Logo;
     public GameObject Loading;
-    public GameObject MenuRestart;
-    public GameObject MenuNext;
-    public GameObject GameEndWin;
 
     private int currentLevel = 0;
 
     void Start()
     {
-        //    MenuRestart.GetComponentInChildren<ButtonScript>().ActionDelegate += ShowRestart;
-        //    MenuRestart.GetComponentInChildren<ButtonScriptExit>().ActionDelegate += ExitGame;
-        //    MenuNext.GetComponentInChildren<ButtonScript>().ActionDelegate += ShowRestart;
-        //    MenuNext.GetComponentInChildren<ButtonScriptExit>().ActionDelegate += ExitGame;
-        //    MenuNext.GetComponentInChildren<ButtonScriptNext>().ActionDelegate += NextLevel;
+        //Scene main = SceneManager.GetSceneByName("main");
+        //SceneManager.SetActiveScene(main);
 
         Logo.GetComponentInChildren<ButtonScript>().ActionDelegate += ShowLevel1;
-        Intro.active = true;
-        Logo.active = false;
-        Loading.active = false;
-        var introVideo = Intro.GetComponentInChildren<VideoPlayer>();
-        var texture = new RenderTexture(1920, 1080, 1);
-        introVideo.targetTexture = texture;
-        introVideo.transform.parent.GetComponentInChildren<RawImage>().texture = texture;
-        introVideo.Play();
-        introVideo.loopPointReached += ShowLogo;
+        //Intro.active = true;
+        //Logo.active = false;
+        //Loading.active = false;
+        //var introVideo = Intro.GetComponentInChildren<VideoPlayer>();
+        //var texture = new RenderTexture(1920, 1080, 1);
+        //introVideo.targetTexture = texture;
+        //introVideo.transform.parent.GetComponentInChildren<RawImage>().texture = texture;
+        //introVideo.Play();
+        //introVideo.loopPointReached += ShowLogo;
+
+        ShowLogoTest();
     }
 
     //public void ShowLogo(VideoPlayer vp)
@@ -57,6 +53,12 @@ public class WindowsManager : MonoBehaviour
     //    Level1.active = true;
     //    currentLevel = 1;
     //}
+
+    public void ShowLogoTest()
+    {
+        Intro.active = false;
+        Logo.active = true;
+    }
 
     public void ShowLogo(VideoPlayer vp)
     {
