@@ -15,7 +15,7 @@ namespace Assets.Scripts.ui
             {4, new Vector3(768, 418, 0)},
             {5, new Vector3(862, -12, 0)},
             {6, new Vector3(768, -437, 0)},
-            {7, new Vector3(-8, -406, 0)},
+            {7, new Vector3(-10, -430, 0)},
         };
 
         public Dictionary<int, Vector3> rotation = new Dictionary<int, Vector3>
