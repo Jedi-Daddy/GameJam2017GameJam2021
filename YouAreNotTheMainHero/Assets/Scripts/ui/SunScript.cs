@@ -55,20 +55,11 @@ namespace Assets.Scripts.ui
 
         public void Appear()
         {
-            //var amountToMove = Speed * Time.deltaTime;
-            //_rectTransform.transform.Translate(ActivePosition * amountToMove);
-            //_rectTransform.localPosition = ActivePosition; 
-            
             needAppearAnimation = true;
             startTime = Time.time;
         }
         public void Dissapear()
         {
-            //var amountToMove = Speed * Time.deltaTime;
-            //transform.Translate(Vector3.forward * amountToMove);
-            //_rectTransform.transform.Translate(DefaultPosition * amountToMove);
-            //_rectTransform.localPosition = DefaultPosition;
-
             needDissapearAnimation = true;
             startTime = Time.time;
         }
