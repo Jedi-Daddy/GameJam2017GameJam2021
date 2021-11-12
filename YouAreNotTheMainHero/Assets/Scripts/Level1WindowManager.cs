@@ -12,7 +12,7 @@ public class Level1WindowManager : MonoBehaviour
     }
     public void ShowMenu()
     {
-        Menu.active = true;
+        Menu.SetActive(true);
     }
     public void ExitGame()
     {

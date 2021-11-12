@@ -60,8 +60,8 @@ public class WindowsManager : MonoBehaviour
 
     public void ShowLogoTest()
     {
-        Intro.active = false;
-        Logo.active = true;
+        Intro.SetActive(false);
+        Logo.SetActive(true);
     }
 
     public void ShowLogo(VideoPlayer vp)
@@ -92,9 +92,9 @@ public class WindowsManager : MonoBehaviour
 
     public void ShowLoading()
     {
-        Logo.active = false;
+        Logo.SetActive(false);
         currentLevel = 1;
-        Loading.active = true;
+        Loading.SetActive(true);
         var loadingVideo = Loading.GetComponentInChildren<VideoPlayer>();
         //var texture = new RenderTexture(1920, 1080, 1);
         //loadingVideo.targetTexture = texture;
@@ -106,22 +106,22 @@ public class WindowsManager : MonoBehaviour
     public void ShowLevel1(VideoPlayer vp)
     {
         vp.Stop();
-        Loading.active = false;
-        Level1Ui.active = true;
+        Loading.SetActive(false);
+        Level1Ui.SetActive(true);
         Level1Ui.GetComponentInChildren<SunManager>().enableListen = true;
     }
 
     public void LoadSceneMain()
     {
-        Logo.active = false;
+        Logo.SetActive(false);
         currentLevel = 1;
-        Loading.active = true;
+        Loading.SetActive(true);
         var loadingVideo = Loading.GetComponentInChildren<VideoPlayer>();
         loadingVideo.Play();
         StartCoroutine(LoadScene());
         loadingVideo.Stop();
-        Loading.active = false;
-        Level1Ui.active = true;
+        Loading.SetActive(false);
+        Level1Ui.SetActive(true);
         Level1Ui.GetComponentInChildren<SunManager>().enableListen = true;
     }
 
