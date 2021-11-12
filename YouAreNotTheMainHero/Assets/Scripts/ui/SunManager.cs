@@ -29,17 +29,6 @@ namespace Assets.Scripts.ui
             {7, new Vector3(0f, 0f, 100f)},
         };
 
-        public Dictionary<int, Vector3> defaultPosition = new Dictionary<int, Vector3>
-        {
-            {1, new Vector3(-938, -506, 0)},
-            {2, new Vector3(-1056, 0, 0)},
-            {3, new Vector3(-938, 532, 0)},
-            {4, new Vector3(1068, 618, 0)},
-            {5, new Vector3(862, -62, 0)},
-            {6, new Vector3(968, -37, 0)},
-            {7, new Vector3(-80, -406, 0)},
-        };
-
         public int currentPosition;
         public int startPosition = 1;
         public bool enableListen;
@@ -51,10 +40,10 @@ namespace Assets.Scripts.ui
             foreach (var sun in suns)
             {
                 SunCollection.Add(sun.Key, sun);
-                sun.Initialize(defaultPosition[sun.Key], positions[sun.Key], rotation[sun.Key]);
+                sun.Initialize(positions[sun.Key], rotation[sun.Key]);
 
             }
-            SunCollection[startPosition].Appear(); 
+            SunCollection[startPosition].SetDefaultPosition(positions[startPosition]); 
             currentPosition = startPosition;
             enableListen = false;
         }
