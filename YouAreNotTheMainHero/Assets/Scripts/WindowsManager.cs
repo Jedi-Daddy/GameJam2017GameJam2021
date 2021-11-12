@@ -22,6 +22,7 @@ public class WindowsManager : MonoBehaviour
         //SceneManager.SetActiveScene(main);
 
         Logo.GetComponentInChildren<ButtonScript>().ActionDelegate += ShowLoading;
+        Level1Ui = GameObject.Find("Level1Ui");
         //Intro.active = true;
         //Logo.active = false;
         //Loading.active = false;

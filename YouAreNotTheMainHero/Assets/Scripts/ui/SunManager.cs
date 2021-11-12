@@ -49,6 +49,7 @@ namespace Assets.Scripts.ui
             SunCollection[startPosition].SetDefaultPosition(positions[startPosition]); 
             currentPosition = startPosition;
             enableListen = false;
+            ShadowScript.Invoke(startPosition);
         }
 
         // Update is called once per frame
@@ -61,8 +62,8 @@ namespace Assets.Scripts.ui
                 var nextPosition = GetNextPosition(normalizedMousePosition);
                 SunCollection[currentPosition].Dissapear();
                 SunCollection[nextPosition].Appear();
+                ShadowScript.Invoke(nextPosition);
                 currentPosition = nextPosition;
-                ShadowScript.Invoke(currentPosition);
             }
         }
 
