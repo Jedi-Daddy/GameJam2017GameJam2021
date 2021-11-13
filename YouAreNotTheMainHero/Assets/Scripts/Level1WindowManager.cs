@@ -1,6 +1,7 @@
 using Assets.Scripts;
 using Assets.Scripts.ui;
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -18,9 +19,11 @@ public class Level1WindowManager : MonoBehaviour
     public Text GameOverEnemyDestroyTest;
 
     public int EnemyDestroyed = 0;
+    public AudioSource Source;
 
     void Start()
     {
+        StartCoroutine(FadeIn(Source, 0.8f));
         Level1Ui.SetActive(true);
         Menu.SetActive(false);
         InfoUi.SetActive(false);
@@ -105,5 +108,21 @@ public class Level1WindowManager : MonoBehaviour
     {
         EnemyDestroyed++;
         EventDispatcher.OnScoreUpdated?.Invoke(this, new IntEventArgs(EnemyDestroyed));
+    }
+
+    public IEnumerator FadeIn(AudioSource audioSource, float FadeTime)
+    {
+        float startVolume = 0.2f;
+
+        audioSource.volume = 0;
+        audioSource.Play();
+
+        while (audioSource.volume < 1.0f)
+        {
+            audioSource.volume += startVolume * Time.deltaTime / FadeTime;
+
+            yield return null;
+        }
+        audioSource.volume = 1f;
     }
 }

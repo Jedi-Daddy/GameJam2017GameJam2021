@@ -33,7 +33,7 @@ public class WindowsManager : MonoBehaviour
         vp.Stop();
         //PreloaderAnimator.Instance.Play("Start_Level");
 
-        StartCoroutine(FadeIn(Source, 0.5f));
+        StartCoroutine(FadeIn(Source, 0.7f));
         Intro.SetActive(false);
         Logo.SetActive(true);
         var gameIntro = Logo.GetComponentInChildren<VideoPlayer>();

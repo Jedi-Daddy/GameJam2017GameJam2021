@@ -7,6 +7,7 @@ public class Healer : MonoBehaviour
     public int KillToHeal = 5;
     public int HealingPower = 20;
     public float Speed = 150f;
+    public AudioSource Source;
 
     private bool AtHome => Vector3.SqrMagnitude(transform.position - BasePoint.position) < 4500f;
 
@@ -18,6 +19,7 @@ public class Healer : MonoBehaviour
     {
         lookpoint = new Vector3(Target.position.x, transform.position.y, Target.position.z);
         transform.LookAt(lookpoint);
+        Source = transform.GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -39,6 +41,8 @@ public class Healer : MonoBehaviour
     private void StartAnimation()
     {
         play = true;
+        if (Source.enabled)
+            Source.Play();
     }
 
     private void Update()
