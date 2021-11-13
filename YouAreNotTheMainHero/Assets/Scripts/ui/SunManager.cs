@@ -48,19 +48,19 @@ namespace Assets.Scripts.ui
             }
             SunCollection[startPosition].SetDefaultPosition(positions[startPosition]); 
             currentPosition = startPosition;
-            ShadowScript.Invoke(startPosition);
+            EventDispatcher.OnSunUpdated(this, new IntEventArgs(startPosition));
         }
 
         void Update()
         {
-            if (Input.GetMouseButtonDown(0) && enableListen)
+            if (Input.GetMouseButtonDown(0))
             {
                 var normalizedMousePosition = new Vector3(Input.mousePosition.x / Screen.width, Input.mousePosition.y / Screen.height, 0);
 
                 var nextPosition = GetNextPosition(normalizedMousePosition);
                 SunCollection[currentPosition].Dissapear();
                 SunCollection[nextPosition].Appear();
-                ShadowScript.Invoke(nextPosition);
+                EventDispatcher.OnSunUpdated(this, new IntEventArgs(nextPosition));
                 currentPosition = nextPosition;
             }
         }
