@@ -811,7 +811,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: 
 --- !u!222 &1069091944
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1108,7 +1108,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660060230}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: f550faa4ae0792b488ebd1132e9182b4, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: d6f383b712516ab4eacdc2086ba80873, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
