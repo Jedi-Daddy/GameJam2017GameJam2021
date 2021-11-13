@@ -1,5 +1,6 @@
 using Assets.Scripts;
 using Assets.Scripts.ui;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -57,5 +58,6 @@ public class Level1WindowManager : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene("level1");
+        Time.timeScale = 1f;
     }
 }
