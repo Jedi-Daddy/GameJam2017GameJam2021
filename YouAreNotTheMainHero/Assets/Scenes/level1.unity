@@ -2133,9 +2133,67 @@ MonoBehaviour:
   - {fileID: 373702578}
   - {fileID: 1242833362}
   - {fileID: 1730122044}
+  Scripts:
+  - Enemy: {fileID: 3588086525839898141, guid: 996ce42ac6f328848935c5f01f728ae1, type: 3}
+    SecondsFromStart: 0
+    Path: 6
+  - Enemy: {fileID: 3588086525839898141, guid: 996ce42ac6f328848935c5f01f728ae1, type: 3}
+    SecondsFromStart: 3
+    Path: 1
+  - Enemy: {fileID: 3588086525839898141, guid: 996ce42ac6f328848935c5f01f728ae1, type: 3}
+    SecondsFromStart: 6
+    Path: 4
+  - Enemy: {fileID: -5452395664103127895, guid: d6428ab4f06c3684ab8666298778a3dd, type: 3}
+    SecondsFromStart: 10
+    Path: 2
+  - Enemy: {fileID: -5452395664103127895, guid: d6428ab4f06c3684ab8666298778a3dd, type: 3}
+    SecondsFromStart: 13
+    Path: 6
+  - Enemy: {fileID: -5452395664103127895, guid: d6428ab4f06c3684ab8666298778a3dd, type: 3}
+    SecondsFromStart: 15
+    Path: 1
+  - Enemy: {fileID: 3926143267990296112, guid: 5884e0662f6a189409946ffff83c9141, type: 3}
+    SecondsFromStart: 15
+    Path: 1
+  - Enemy: {fileID: 3588086525839898141, guid: 996ce42ac6f328848935c5f01f728ae1, type: 3}
+    SecondsFromStart: 15
+    Path: 3
+  - Enemy: {fileID: -3282925895324965270, guid: 1de9f6f35830abd49bae487ce4bf4953, type: 3}
+    SecondsFromStart: 20
+    Path: 5
+  - Enemy: {fileID: 3926143267990296112, guid: 5884e0662f6a189409946ffff83c9141, type: 3}
+    SecondsFromStart: 24
+    Path: 2
+  - Enemy: {fileID: 4541368191630597227, guid: 590899a977f822b4e9c85568c27cfef9, type: 3}
+    SecondsFromStart: 26
+    Path: 6
+  - Enemy: {fileID: 3588086525839898141, guid: 996ce42ac6f328848935c5f01f728ae1, type: 3}
+    SecondsFromStart: 29
+    Path: 5
+  - Enemy: {fileID: 4541368191630597227, guid: 590899a977f822b4e9c85568c27cfef9, type: 3}
+    SecondsFromStart: 30
+    Path: 1
+  - Enemy: {fileID: -6383830145299231380, guid: 7dbbe793df2b0bc4ba65eec977a35590, type: 3}
+    SecondsFromStart: 33
+    Path: 3
+  - Enemy: {fileID: -5452395664103127895, guid: d6428ab4f06c3684ab8666298778a3dd, type: 3}
+    SecondsFromStart: 33
+    Path: 4
+  - Enemy: {fileID: 8146253533867739309, guid: 45e63d2639c468346b378c25d9e71502, type: 3}
+    SecondsFromStart: 35
+    Path: 6
+  - Enemy: {fileID: 3588086525839898141, guid: 996ce42ac6f328848935c5f01f728ae1, type: 3}
+    SecondsFromStart: 38
+    Path: 2
+  - Enemy: {fileID: 3588086525839898141, guid: 996ce42ac6f328848935c5f01f728ae1, type: 3}
+    SecondsFromStart: 40
+    Path: 3
+  - Enemy: {fileID: -3282925895324965270, guid: 1de9f6f35830abd49bae487ce4bf4953, type: 3}
+    SecondsFromStart: 42
+    Path: 5
   Delay: 3
   Target: {fileID: 107664269}
-  AutoSpawn: 1
+  AutoSpawn: 0
 --- !u!4 &1137021110
 Transform:
   m_ObjectHideFlags: 0
