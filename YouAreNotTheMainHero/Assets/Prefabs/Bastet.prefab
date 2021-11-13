@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 1358529701661878262}
   - component: {fileID: 1847650685489723136}
   - component: {fileID: 3926143267990296112}
+  - component: {fileID: 3219929241458259232}
   m_Layer: 0
   m_Name: Bastet
   m_TagString: Enemy
@@ -172,6 +173,19 @@ MonoBehaviour:
   Speed: 150
   HP: 30
   Damage: 10
+--- !u!114 &3219929241458259232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358529701661878257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878c32cc33cb40c4faf809f3cd60a0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1358529701661878262}
 --- !u!1 &1358529701733767871
 GameObject:
   m_ObjectHideFlags: 0

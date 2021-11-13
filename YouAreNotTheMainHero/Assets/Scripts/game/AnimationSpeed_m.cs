@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Enemy))]
-public class ExampleScript : MonoBehaviour
+public class AnimationSpeed_m : MonoBehaviour
 {
     public Animation anim;
 
@@ -10,9 +10,9 @@ public class ExampleScript : MonoBehaviour
         var enemy = GetComponent<Enemy>();
 
         // Walk backwards
-        anim["Base_pers_anim_bastet"].speed = enemy.Speed * 0.25f;
+        anim["Base_pers_anim"].speed = enemy.Speed * 0.012f;
 
         // Walk at double speed
-        anim["Base_pers_anim_bastet"].speed = enemy.Speed * 0.25f;
+        anim["Base_pers_anim"].speed = enemy.Speed * 0.012f;
     }
 }

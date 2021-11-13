@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 8173573549058882147}
   - component: {fileID: 1886178844574145859}
   - component: {fileID: 3588086525839898141}
+  - component: {fileID: 4372395397608069892}
   m_Layer: 0
   m_Name: Mummy
   m_TagString: Enemy
@@ -237,6 +238,19 @@ MonoBehaviour:
   Speed: 100
   HP: 20
   Damage: 5
+--- !u!114 &4372395397608069892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8173573549058882148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393fc8663e292a54a8f621b848fcfde4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 8173573549058882147}
 --- !u!1001 &8173573547672018921
 PrefabInstance:
   m_ObjectHideFlags: 0
