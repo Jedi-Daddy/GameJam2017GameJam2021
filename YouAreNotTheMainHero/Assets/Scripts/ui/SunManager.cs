@@ -13,10 +13,9 @@ namespace Assets.Scripts.ui
             {0, new Vector3(-738, -406, 0)},
             {1, new Vector3(-856, 0, 0)},
             {2, new Vector3(-738, 432, 0)},
-            {3, new Vector3(10, 430, 0)},
-            {4, new Vector3(768, 418, 0)},
-            {5, new Vector3(862, -12, 0)},
-            {6, new Vector3(768, -437, 0)},
+            {3, new Vector3(768, 418, 0)},
+            {4, new Vector3(862, -12, 0)},
+            {5, new Vector3(768, -437, 0)},
         };
 
         public Dictionary<int, Vector3> rotation = new Dictionary<int, Vector3>
@@ -24,10 +23,9 @@ namespace Assets.Scripts.ui
             {0, new Vector3(0f, 0f, 48f)},
             {1, new Vector3(0f, 0f, 0f)},
             {2, new Vector3(0f, 0f, -20f)},
-            {3, new Vector3(0f, 0f, -100f)},
-            {4, new Vector3(0f, -180f, -48f)},
-            {5, new Vector3(0f, -180f, 0f)},
-            {6, new Vector3(0f, -180f, 20f)},
+            {3, new Vector3(0f, -180f, -48f)},
+            {4, new Vector3(0f, -180f, 0f)},
+            {5, new Vector3(0f, -180f, 20f)},
         };
 
         public int currentPosition;
@@ -72,7 +70,7 @@ namespace Assets.Scripts.ui
             if (mousePos.x >= 0.5)
             {
                 IsClockwise = true;
-                if (currentPosition == 6)
+                if (currentPosition == 5)
                     return 0;
                 return currentPosition + 1;
             }
@@ -80,7 +78,7 @@ namespace Assets.Scripts.ui
             {
                 IsClockwise = false;
                 if (currentPosition == 0)
-                    return 6;
+                    return 5;
                 return currentPosition - 1;
 
             }
