@@ -12,6 +12,8 @@ public class WindowsManager : MonoBehaviour
     public GameObject Loading;
     public GameObject GameLogoBackground;
 
+    public bool loadingStopPlay;
+
     private int currentLevel = 0;
 
     void Start()
@@ -64,6 +66,7 @@ public class WindowsManager : MonoBehaviour
 
     public void LoadSceneMain()
     {
+        var videoFinishIsSet = false;
         Logo.SetActive(false);
         currentLevel = 1;
         Loading.SetActive(true);
@@ -72,16 +75,11 @@ public class WindowsManager : MonoBehaviour
         loadingVideo.targetTexture = texture;
         loadingVideo.transform.parent.GetComponentInChildren<RawImage>().texture = texture;
         loadingVideo.Play();
-        loadingVideo.loopPointReached += EnterFirstLoop;
-    }
-
-    public void EnterFirstLoop(VideoPlayer vp)
-    {
-        var videoFinishIsSet = false;
-        StartCoroutine(LoadScene(vp, videoFinishIsSet));
+        StartCoroutine(LoadScene(loadingVideo, videoFinishIsSet));
     }
     public void FinishLoading(VideoPlayer vp)
     {
+        loadingStopPlay = true;
         vp.Stop();
     }
 
@@ -98,7 +96,7 @@ public class WindowsManager : MonoBehaviour
                     vp.loopPointReached += FinishLoading;
                     videoFinishIsSet = true;
                 }
-                if (!vp.isPlaying)
+                if (loadingStopPlay)
                 {
                     asyncLoad.allowSceneActivation = true;
                 }
