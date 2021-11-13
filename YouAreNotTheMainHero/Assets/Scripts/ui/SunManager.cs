@@ -31,7 +31,7 @@ namespace Assets.Scripts.ui
         };
 
         public int currentPosition;
-        public int startPosition = 0;
+        public int startPosition;
         public bool enableListen;
 
         public UnityEvent<int> ShadowScript;
@@ -48,11 +48,9 @@ namespace Assets.Scripts.ui
             }
             SunCollection[startPosition].SetDefaultPosition(positions[startPosition]); 
             currentPosition = startPosition;
-            enableListen = false;
             ShadowScript.Invoke(startPosition);
         }
 
-        // Update is called once per frame
         void Update()
         {
             if (Input.GetMouseButtonDown(0) && enableListen)
