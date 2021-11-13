@@ -10,7 +10,6 @@ namespace Assets.Scripts.ui
         public int Key;
         private Vector3 DefaultPosition;
         private Vector3 ActivePosition;
-        private Vector3 Rotation;
         private float journeyLength;
 
         public bool needAppearAnimation;
@@ -19,15 +18,13 @@ namespace Assets.Scripts.ui
 
         private RectTransform _rectTransform;
 
-        public void Initialize(Vector3 activePosition, Vector3 rotation)
+
+        public void Initialize(Vector3 activePosition)
         {
             DefaultPosition = new Vector3(activePosition.x * dissapearNumber, activePosition.y * dissapearNumber);
             ActivePosition = activePosition;
-            Rotation = rotation;
             _rectTransform = GetComponent<RectTransform>();
             _rectTransform.localPosition = DefaultPosition;
-            _rectTransform.rotation = Quaternion.Euler(rotation.x, rotation.y, rotation.z);
-
             journeyLength = Vector3.Distance(activePosition, DefaultPosition);
         }
 

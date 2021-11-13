@@ -10,22 +10,12 @@ namespace Assets.Scripts.ui
 
         public Dictionary<int, Vector3> positions = new Dictionary<int, Vector3>
         {
-            {0, new Vector3(-738, -406, 0)},
-            {1, new Vector3(-856, 0, 0)},
-            {2, new Vector3(-738, 432, 0)},
-            {3, new Vector3(768, 418, 0)},
-            {4, new Vector3(862, -12, 0)},
-            {5, new Vector3(768, -437, 0)},
-        };
-
-        public Dictionary<int, Vector3> rotation = new Dictionary<int, Vector3>
-        {
-            {0, new Vector3(0f, 0f, 48f)},
-            {1, new Vector3(0f, 0f, 0f)},
-            {2, new Vector3(0f, 0f, -20f)},
-            {3, new Vector3(0f, -180f, -48f)},
-            {4, new Vector3(0f, -180f, 0f)},
-            {5, new Vector3(0f, -180f, 20f)},
+            {0, new Vector3(-960, -530, 0)},
+            {1, new Vector3(-960, 20, 0)},
+            {2, new Vector3(-960, 530, 0)},
+            {3, new Vector3(960, 530, 0)},
+            {4, new Vector3(960, 20, 0)},
+            {5, new Vector3(960, -530, 0)},
         };
 
         public int currentPosition;
@@ -43,7 +33,7 @@ namespace Assets.Scripts.ui
             foreach (var sun in suns)
             {
                 SunCollection.Add(sun.Key, sun);
-                sun.Initialize(positions[sun.Key], rotation[sun.Key]);
+                sun.Initialize(positions[sun.Key]);
 
             }
             SunCollection[startPosition].SetDefaultPosition(positions[startPosition]); 
