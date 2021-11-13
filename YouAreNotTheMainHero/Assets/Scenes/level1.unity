@@ -2626,6 +2626,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   period: 5
+--- !u!1 &1902128469 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4809286415384538396, guid: bfd9b10b5648b254ea4e6afaa2cf5abe, type: 3}
+  m_PrefabInstance: {fileID: 184654838}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1902128473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902128469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb8a8b58f9b16b44822e0d53d154d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: {x: 0, y: 0.2}
+  Threshold: 0.075
+  FrameNumber: 5
 --- !u!1 &1980032546
 GameObject:
   m_ObjectHideFlags: 0
