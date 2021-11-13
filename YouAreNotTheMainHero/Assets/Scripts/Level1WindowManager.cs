@@ -24,6 +24,7 @@ public class Level1WindowManager : MonoBehaviour
     }
     public void ShowInfo()
     {
+        Time.timeScale = 0f;
         Level1Ui.GetComponentInChildren<SunManager>().enableListen = false;
         InfoUi.SetActive(true);
     }
@@ -32,9 +33,11 @@ public class Level1WindowManager : MonoBehaviour
     {
         InfoUi.SetActive(false);
         Level1Ui.GetComponentInChildren<SunManager>().enableListen = true;
+        Time.timeScale = 1f;
     }
     public void ShowMenu()
     {
+        Time.timeScale = 0f;
         Level1Ui.GetComponentInChildren<SunManager>().enableListen = false;
         Menu.SetActive(true);
     }
@@ -43,6 +46,7 @@ public class Level1WindowManager : MonoBehaviour
     {
         Menu.SetActive(false);
         Level1Ui.GetComponentInChildren<SunManager>().enableListen = true;
+        Time.timeScale = 1f;
     }
 
     public void ExitGame()
