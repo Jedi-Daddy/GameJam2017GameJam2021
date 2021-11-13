@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void ApplyDamag(int damage)
     {
+        Debug.Log($"Enemy apply damage {name} {damage}");
         HP -= damage;
     }
 
@@ -42,7 +43,7 @@ public class Enemy : MonoBehaviour
         else if (other.gameObject.tag == "Shadow")
         {
             var shadow = other.gameObject.GetComponent<Shadow>();
-            StartCoroutine(ApplyDamage(shadow.DamageDelay, shadow.DamageInterval, shadow.Damage));
+            StartCoroutine(ShadowEnter(shadow));
         }
     }
 
@@ -52,25 +53,24 @@ public class Enemy : MonoBehaviour
         DamageStoped();
     }
 
-    private IEnumerator ApplyDamage(float delay, float interval, int damage)
+    private IEnumerator ShadowEnter(Shadow shadow)
     {
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(shadow.DamageDelay);
         Debug.Log($"Enemy start damage {name}");
 
         DamageStarted();
 
         while (HP > 0)
         {
-            ApplyDamag(damage);
-            Debug.Log($"Enemy apply damage {name} {damage}");
-            yield return new WaitForSeconds(interval);
+            ApplyDamag(shadow.Damage);
+            yield return new WaitForSeconds(shadow.DamageInterval);
         }
 
         StartCoroutine(Die());
         Debug.Log($"Enemy dead {name}");
     }
 
-    public IEnumerator Die()
+    protected IEnumerator Die()
     {
         isDying = true;
 

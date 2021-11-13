@@ -77,9 +77,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Level: {fileID: 0}
   Obelisk: {fileID: 5012538970190154120}
-  DamageDelay: 1
+  DamageDelay: 0.5
   DamageInterval: 0.5
-  Damage: 10
+  damage: 10
+  LooseTime: 3
+  LooseDamage: 5
+  LooseColor: {r: 0, g: 0, b: 0, a: 0.2509804}
+  ShadowObject: {fileID: 4809286415384538396}
+  RotationAmount: 2
+  TicksPerSecond: 60
+  AngleMinimum: 0
+  IsMoving: 0
+  NeededRoration: 0
 --- !u!1 &4809286415384538396
 GameObject:
   m_ObjectHideFlags: 0

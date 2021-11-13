@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Obelisk
   - Shadow
+  - Enemy_Hathor
   layers:
   - Default
   - TransparentFX

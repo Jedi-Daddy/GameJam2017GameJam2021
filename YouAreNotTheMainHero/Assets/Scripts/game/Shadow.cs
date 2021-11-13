@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class Shadow : MonoBehaviour
 {
+    public int Damage => curDamage;
+
     public Level Level;
     public Transform Obelisk;
     public float DamageDelay;
     public float DamageInterval;
-    public int Damage;
+    [SerializeField] private int NormalDamage;
+    [Header("Loose")]
+    public float LooseTime;
+    public int LooseDamage;
+    public Color LooseColor;
+    public GameObject ShadowObject;
 
     public float RotationAmount = 2f;
     public int TicksPerSecond = 60;
@@ -16,6 +23,11 @@ public class Shadow : MonoBehaviour
     public float AngleMinimum = 0;
     public bool IsMoving;
     public int NeededRoration;
+
+    private Coroutine loose;
+    private int curDamage;
+    private Material material;
+    private Color normalColor;
 
     public Dictionary<int, int> PathRotation = new Dictionary<int, int>
         {
@@ -26,6 +38,13 @@ public class Shadow : MonoBehaviour
             { 4, 44 },
             { 5, 90 },
         };
+
+    private void Start()
+    {
+        curDamage = NormalDamage;
+        material = ShadowObject.GetComponent<MeshRenderer>().material;
+        normalColor = material.GetColor("_Color");
+    }
 
     private void OnEnable()
     {
@@ -41,7 +60,7 @@ public class Shadow : MonoBehaviour
 
     public void OnStarDirectiontPosition(object sender, PositionEventArgs args)
     {
-        transform.LookAt(args.Position);
+        //transform.LookAt(args.Position);
     }
 
     public void OnSunUpdated(object sender, IntEventArgs args)
@@ -49,6 +68,29 @@ public class Shadow : MonoBehaviour
         NeededRoration = PathRotation[args.Idx];
         if (!IsMoving)
             StartCoroutine(Rotate(args.IsClockwise));
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy_Hathor")
+        {
+            if (loose != null)
+                StopCoroutine(loose);
+
+            loose = StartCoroutine(StartLoose());
+        }
+    }
+
+    private IEnumerator StartLoose()
+    {
+        curDamage = LooseDamage;
+        material.SetColor("_Color", LooseColor);
+
+        yield return new WaitForSeconds(LooseTime);
+
+        curDamage = NormalDamage;
+        material.SetColor("_Color", normalColor);
+        loose = null;
     }
 
     public IEnumerator Rotate(bool isClockwice)

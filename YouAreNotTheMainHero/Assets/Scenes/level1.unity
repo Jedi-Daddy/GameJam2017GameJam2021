@@ -317,12 +317,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1137021109}
     - target: {fileID: 6183183941842958791, guid: bfd9b10b5648b254ea4e6afaa2cf5abe, type: 3}
-      propertyPath: Damage
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6183183941842958791, guid: bfd9b10b5648b254ea4e6afaa2cf5abe, type: 3}
-      propertyPath: DamageDelay
-      value: 0.5
+      propertyPath: NormalDamage
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8947609424206990932, guid: bfd9b10b5648b254ea4e6afaa2cf5abe, type: 3}
       propertyPath: m_Name
@@ -1448,6 +1444,7 @@ MonoBehaviour:
   - {fileID: 3588086525839898141, guid: 996ce42ac6f328848935c5f01f728ae1, type: 3}
   - {fileID: -6383830145299231380, guid: 7dbbe793df2b0bc4ba65eec977a35590, type: 3}
   - {fileID: -5452395664103127895, guid: d6428ab4f06c3684ab8666298778a3dd, type: 3}
+  - {fileID: 4541368191630597227, guid: 590899a977f822b4e9c85568c27cfef9, type: 3}
   SpawnPoints:
   - {fileID: 1448916482}
   - {fileID: 288841935}
