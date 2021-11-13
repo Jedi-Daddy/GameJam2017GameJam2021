@@ -1,8 +1,9 @@
 using Assets.Scripts;
 using Assets.Scripts.ui;
-using System.Collections;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Level1WindowManager : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class Level1WindowManager : MonoBehaviour
     public GameObject MenuButton;
     public GameObject InfoButton;
     public GameObject InfoUi;
+    public Text EnemyDestroyTest;
+    public Text MenuEnemyDestroyTest;
+
+    public long EnemyDestroyed = 0;
+
     void Start()
     {
         Menu.SetActive(false);
@@ -22,6 +28,23 @@ public class Level1WindowManager : MonoBehaviour
         MenuButton.GetComponent<ButtonScript>().ActionDelegate += ShowMenu;
         InfoButton.GetComponent<ButtonScript>().ActionDelegate += ShowInfo;
         Level1Ui.GetComponentInChildren<SunManager>().enableListen = true;
+    }
+
+    private void Update()
+    {
+        EnemyDestroyTest.text = EnemyDestroyed.ToString();
+    }
+
+    private void OnEnable()
+    {
+        EventDispatcher.OnGameOver += ShowGameOver;
+        EventDispatcher.OnEnemyDiedByShadow += UpdateEnemyDestroyedCount;
+    }
+
+    private void OnDisable()
+    {
+        EventDispatcher.OnGameOver -= ShowGameOver;
+        EventDispatcher.OnEnemyDiedByShadow -= UpdateEnemyDestroyedCount;
     }
     public void ShowInfo()
     {
@@ -40,6 +63,7 @@ public class Level1WindowManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         Level1Ui.GetComponentInChildren<SunManager>().enableListen = false;
+        MenuEnemyDestroyTest.text = EnemyDestroyed.ToString();
         Menu.SetActive(true);
     }
 
@@ -59,5 +83,15 @@ public class Level1WindowManager : MonoBehaviour
     {
         SceneManager.LoadScene("level1");
         Time.timeScale = 1f;
+    }
+
+    public void ShowGameOver(object sender, EventArgs args)
+    {
+        ShowMenu();
+    }
+
+    public void UpdateEnemyDestroyedCount(object sender, EventArgs args)
+    {
+        EnemyDestroyed++;
     }
 }

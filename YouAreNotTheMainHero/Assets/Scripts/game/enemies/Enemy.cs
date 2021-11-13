@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -76,6 +77,8 @@ public class Enemy : MonoBehaviour
 
         StartCoroutine(Die());
         Debug.Log($"Enemy dead {name}");
+
+        EventDispatcher.OnEnemyDiedByShadow.Invoke(this, new EventArgs());
     }
 
     protected IEnumerator Die()

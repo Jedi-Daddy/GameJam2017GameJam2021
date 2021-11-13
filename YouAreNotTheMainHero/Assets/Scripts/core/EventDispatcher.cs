@@ -11,6 +11,7 @@ public static class EventDispatcher
 
     public static EventHandler<IntEventArgs> OnHpUpdated;
     public static EventHandler<EventArgs> OnGameOver;
+    public static EventHandler<EventArgs> OnEnemyDiedByShadow;
 }
 
 
