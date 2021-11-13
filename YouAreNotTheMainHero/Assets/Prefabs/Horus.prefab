@@ -28,6 +28,19 @@ MonoBehaviour:
   Speed: 100
   HP: 65
   Damage: 10
+--- !u!114 &3136785789066302391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8240758503916939121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878c32cc33cb40c4faf809f3cd60a0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 6072208895376904654}
 --- !u!1001 &3567916697129544909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -405,6 +418,11 @@ PrefabInstance:
 --- !u!1 &8240758503916939121 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4890565493915118647, guid: 98b90487fbc2b01438c1d28d3148bb44, type: 3}
+  m_PrefabInstance: {fileID: 3567916698565102406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &6072208895376904654 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 7333857477382904456, guid: 98b90487fbc2b01438c1d28d3148bb44, type: 3}
   m_PrefabInstance: {fileID: 3567916698565102406}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2920232182235885651 stripped

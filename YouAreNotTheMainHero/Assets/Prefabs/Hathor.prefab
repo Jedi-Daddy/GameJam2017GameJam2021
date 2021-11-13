@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 1990643123954625965}
   - component: {fileID: 1215536824842403163}
   - component: {fileID: 4541368191630597227}
+  - component: {fileID: 273365394707522638}
   m_Layer: 0
   m_Name: Hathor
   m_TagString: Enemy
@@ -238,6 +239,19 @@ MonoBehaviour:
   Speed: 150
   HP: 30
   Damage: 10
+--- !u!114 &273365394707522638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5064885680270918015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878c32cc33cb40c4faf809f3cd60a0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1990643123954625965}
 --- !u!1001 &603721869113964758
 PrefabInstance:
   m_ObjectHideFlags: 0
