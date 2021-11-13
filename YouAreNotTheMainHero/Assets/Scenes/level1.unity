@@ -197,7 +197,7 @@ Transform:
   - {fileID: 53976993}
   - {fileID: 107664269}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!1001 &174825267
 PrefabInstance:
@@ -815,7 +815,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &720058483
 SpriteRenderer:
@@ -946,63 +946,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8063169b1ea9c4b45bd92113d3eb09f1, type: 3}
   m_PrefabInstance: {fileID: 792326272}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &816025027
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2170127829686204553, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
-      propertyPath: m_Name
-      value: Anubis
-      objectReference: {fileID: 0}
-    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.391877
-      objectReference: {fileID: 0}
-    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 467.73627
-      objectReference: {fileID: 0}
-    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2085.4348
-      objectReference: {fileID: 0}
-    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
 --- !u!1001 &852794354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1493,7 +1436,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 36, y: -135, z: 0}
 --- !u!114 &1126738175
 MonoBehaviour:
@@ -1573,7 +1516,7 @@ Transform:
   - {fileID: 1242833362}
   - {fileID: 1730122044}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1137021111
 AudioSource:
@@ -2169,7 +2112,7 @@ RectTransform:
   - {fileID: 2015515101}
   - {fileID: 1330054307}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2275,7 +2218,7 @@ RectTransform:
   - {fileID: 1675298287}
   - {fileID: 1092056576}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
