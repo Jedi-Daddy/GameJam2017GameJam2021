@@ -28,10 +28,10 @@ public class PositionEventArgs : EventArgs
 
 public class IntEventArgs : EventArgs
 {
-    public int Idx { get; set; }
+    public int Value { get; set; }
 
-    public IntEventArgs(int idx)
+    public IntEventArgs(int value)
     {
-        Idx = idx;
+        Value = value;
     }
 }

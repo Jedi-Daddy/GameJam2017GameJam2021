@@ -18,7 +18,7 @@ public class Obelisk : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             var enemy = other.gameObject.GetComponent<Enemy>();
-            HP = Mathf.Max(HP - enemy.Damage, 0);
+            UpdateHP(enemy.Damage);
             UpdateState();
 
             Debug.Log($"Obelisk apply damage from {enemy.name} HP {HP}");
@@ -32,7 +32,7 @@ public class Obelisk : MonoBehaviour
 
         HP = Mathf.Max(HP - damage, 0);
 
-        EventDispatcher.OnHpUpdated.Invoke(this, new IntEventArgs(HP));
+        EventDispatcher.OnHpUpdated?.Invoke(this, new IntEventArgs(HP));
 
         if (HP == 0)
             StartCoroutine(DispatchEvent());
@@ -42,7 +42,7 @@ public class Obelisk : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        EventDispatcher.OnGameOver.Invoke(this, new EventArgs());
+        EventDispatcher.OnGameOver?.Invoke(this, new EventArgs());
     }
 
     private void UpdateState()
