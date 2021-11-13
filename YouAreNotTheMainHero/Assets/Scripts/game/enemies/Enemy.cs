@@ -77,8 +77,6 @@ public class Enemy : MonoBehaviour
 
         StartCoroutine(Die());
         Debug.Log($"Enemy dead {name}");
-
-        EventDispatcher.OnEnemyDiedByShadow.Invoke(this, new EventArgs());
     }
 
     protected IEnumerator Die()
@@ -92,6 +90,7 @@ public class Enemy : MonoBehaviour
         }
 
         Destroy(gameObject);
+        EventDispatcher.OnEnemyDiedByShadow.Invoke(this, new EventArgs());
     }
 
     private bool TryPlayAnimation(string name)
