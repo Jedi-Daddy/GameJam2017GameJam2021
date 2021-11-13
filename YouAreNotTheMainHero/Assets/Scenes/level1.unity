@@ -217,7 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &163063913
 RectTransform:
   m_ObjectHideFlags: 0
@@ -858,7 +858,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &251487357
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1025,7 +1025,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &460067879
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2855,7 +2855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemies:
   - {fileID: 3926143267990296112, guid: 5884e0662f6a189409946ffff83c9141, type: 3}
-  - {fileID: -3282925895324965270, guid: 1de9f6f35830abd49bae487ce4bf4953, type: 3}
+  - {fileID: 5563257532054582911, guid: 1de9f6f35830abd49bae487ce4bf4953, type: 3}
   - {fileID: 3588086525839898141, guid: 996ce42ac6f328848935c5f01f728ae1, type: 3}
   - {fileID: -6383830145299231380, guid: 7dbbe793df2b0bc4ba65eec977a35590, type: 3}
   - {fileID: -5452395664103127895, guid: d6428ab4f06c3684ab8666298778a3dd, type: 3}
@@ -2883,16 +2883,13 @@ MonoBehaviour:
   - Enemy: {fileID: -5452395664103127895, guid: d6428ab4f06c3684ab8666298778a3dd, type: 3}
     SecondsFromStart: 13
     Path: 6
-  - Enemy: {fileID: -5452395664103127895, guid: d6428ab4f06c3684ab8666298778a3dd, type: 3}
-    SecondsFromStart: 15
-    Path: 1
   - Enemy: {fileID: 3926143267990296112, guid: 5884e0662f6a189409946ffff83c9141, type: 3}
     SecondsFromStart: 15
     Path: 1
   - Enemy: {fileID: 3588086525839898141, guid: 996ce42ac6f328848935c5f01f728ae1, type: 3}
     SecondsFromStart: 15
     Path: 3
-  - Enemy: {fileID: -3282925895324965270, guid: 1de9f6f35830abd49bae487ce4bf4953, type: 3}
+  - Enemy: {fileID: 5563257532054582911, guid: 1de9f6f35830abd49bae487ce4bf4953, type: 3}
     SecondsFromStart: 20
     Path: 5
   - Enemy: {fileID: 3926143267990296112, guid: 5884e0662f6a189409946ffff83c9141, type: 3}
@@ -2922,7 +2919,7 @@ MonoBehaviour:
   - Enemy: {fileID: 3588086525839898141, guid: 996ce42ac6f328848935c5f01f728ae1, type: 3}
     SecondsFromStart: 40
     Path: 3
-  - Enemy: {fileID: -3282925895324965270, guid: 1de9f6f35830abd49bae487ce4bf4953, type: 3}
+  - Enemy: {fileID: 5563257532054582911, guid: 1de9f6f35830abd49bae487ce4bf4953, type: 3}
     SecondsFromStart: 42
     Path: 5
   Delay: 3
@@ -2966,7 +2963,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1165990212
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3357,7 +3354,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1424841146
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3534,21 +3531,7 @@ MonoBehaviour:
   startPosition: 1
   enableListen: 0
   IsClockwise: 0
-  ShadowScript:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2082994381}
-        m_TargetAssemblyTypeName: Shadow, Assembly-CSharp
-        m_MethodName: OnPointSelected
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  ClickThreshold: 0.5
 --- !u!1 &1448916481
 GameObject:
   m_ObjectHideFlags: 0
@@ -4041,7 +4024,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1615563220
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5350,17 +5333,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054048328}
   m_CullTransparentMesh: 1
---- !u!114 &2082994381 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6183183941842958791, guid: bfd9b10b5648b254ea4e6afaa2cf5abe, type: 3}
-  m_PrefabInstance: {fileID: 184654838}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 403cc804174303c46ae094660531cbc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2090394097
 GameObject:
   m_ObjectHideFlags: 0

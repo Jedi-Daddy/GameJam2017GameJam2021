@@ -24,12 +24,12 @@ public class Ra : Enemy
 
     private void OnEnable()
     {
-        DamageStoped();
+        OnDamageStoped();
     }
 
     private void OnDisable()
     {
-        DamageStarted();
+        OnDamageStoped();
     }
 
     protected override void Update()
@@ -45,17 +45,17 @@ public class Ra : Enemy
             StartCoroutine(Die());
     }
 
-    protected override void DamageStarted()
+    protected override void OnDamageStarted()
     {
-        base.DamageStarted();
+        base.OnDamageStarted();
 
         direction = -1;
         speed = DecSpeed;
     }
 
-    protected override void DamageStoped()
+    protected override void OnDamageStoped()
     {
-        base.DamageStoped();
+        base.OnDamageStoped();
 
         direction = 1;
         speed = IncSpeed;
