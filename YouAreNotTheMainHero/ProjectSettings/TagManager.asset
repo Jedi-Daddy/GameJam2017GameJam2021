@@ -8,6 +8,7 @@ TagManager:
   - Obelisk
   - Shadow
   - Enemy_Hathor
+  - Healer
   layers:
   - Default
   - TransparentFX

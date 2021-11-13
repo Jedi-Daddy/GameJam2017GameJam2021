@@ -40,7 +40,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 746064081003098734}
-  - component: {fileID: 2672036671643553986}
   m_Layer: 0
   m_Name: Tors
   m_TagString: Untagged
@@ -70,22 +69,6 @@ Transform:
   m_Father: {fileID: 1778548960797227829}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &2672036671643553986
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 746064081003098733}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: e1253658ee38eda4e97b664f8939dd9e, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: e1253658ee38eda4e97b664f8939dd9e, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &746064081058254861
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,12 +173,11 @@ GameObject:
   - component: {fileID: 1778548960797227829}
   - component: {fileID: 746064081608241864}
   - component: {fileID: 6996866661566633448}
-  - component: {fileID: 5404215294640815798}
-  - component: {fileID: 5159171274386854831}
   - component: {fileID: 8935327127593812809}
+  - component: {fileID: 673729135}
   m_Layer: 0
   m_Name: Kompot
-  m_TagString: Enemy
+  m_TagString: Healer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -246,34 +228,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2, y: 2.8, z: 1.4}
   m_Center: {x: 0.1, y: 1.4, z: 0.2}
---- !u!114 &5404215294640815798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4937900626499898060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73be79e1c18f702428b5b1bdeb20d704, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 100
-  HP: 20
-  Damage: 5
---- !u!114 &5159171274386854831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4937900626499898060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 393fc8663e292a54a8f621b848fcfde4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 746064081608241864}
 --- !u!82 &8935327127593812809
 AudioSource:
   m_ObjectHideFlags: 0
@@ -370,6 +324,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &673729135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4937900626499898060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59fc2e790ab277f4eb0a98a435b1f10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BasePoint: {fileID: 0}
+  Target: {fileID: 0}
+  KillToHeal: 2
+  HealingPower: 20
+  Speed: 250
 --- !u!1001 &1414560930008452283
 PrefabInstance:
   m_ObjectHideFlags: 0

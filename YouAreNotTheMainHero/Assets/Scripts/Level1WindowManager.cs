@@ -17,7 +17,7 @@ public class Level1WindowManager : MonoBehaviour
     public Text MenuEnemyDestroyTest;
     public Text GameOverEnemyDestroyTest;
 
-    public long EnemyDestroyed = 0;
+    public int EnemyDestroyed = 0;
 
     void Start()
     {
@@ -103,5 +103,6 @@ public class Level1WindowManager : MonoBehaviour
     public void UpdateEnemyDestroyedCount(object sender, EventArgs args)
     {
         EnemyDestroyed++;
+        EventDispatcher.OnScoreUpdated?.Invoke(this, new IntEventArgs(EnemyDestroyed));
     }
 }

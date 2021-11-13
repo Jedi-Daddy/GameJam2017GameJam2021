@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Enemy))]
 public class AnimationSpeed_m : MonoBehaviour
 {
     public Animation anim;
