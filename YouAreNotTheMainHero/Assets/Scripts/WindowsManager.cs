@@ -3,12 +3,14 @@ using UnityEngine.Video;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Assets.Scripts;
+using UnityEngine.UI;
 
 public class WindowsManager : MonoBehaviour
 {
     public GameObject Intro;
     public GameObject Logo;
     public GameObject Loading;
+    public GameObject GameLogoBackground;
 
     private int currentLevel = 0;
 
@@ -18,65 +20,47 @@ public class WindowsManager : MonoBehaviour
         //SceneManager.SetActiveScene(main);
 
         Logo.GetComponentInChildren<ButtonScript>().ActionDelegate += LoadSceneMain;
-        //Intro.active = true;
-        //Logo.active = false;
-        //Loading.active = false;
-        //var introVideo = Intro.GetComponentInChildren<VideoPlayer>();
+        Intro.SetActive(true);
+        Logo.SetActive(false);
+        Loading.SetActive(false);
+        GameLogoBackground.SetActive(false);
+        var introVideo = Intro.GetComponentInChildren<VideoPlayer>();
         //var texture = new RenderTexture(1920, 1080, 1);
         //introVideo.targetTexture = texture;
         //introVideo.transform.parent.GetComponentInChildren<RawImage>().texture = texture;
-        //introVideo.Play();
-        //introVideo.loopPointReached += ShowLogo;
+        introVideo.Play();
+        introVideo.loopPointReached += ShowGameIntro;
 
-        ShowLogoTest();
+        //ShowLogoTest();
     }
 
-    //public void ShowLogo(VideoPlayer vp)
-    //{
-    //    vp.Stop();
-    //    Intro.active = false;
-    //    Logo.active = true;
-    //    var loadingVideo = Logo.GetComponentInChildren<VideoPlayer>();
-    //    //var texture = new RenderTexture(1920, 1080, 1);
-    //    //loadingVideo.targetTexture = texture;
-    //    //loadingVideo.transform.parent.GetComponentInChildren<RawImage>().texture = texture;
-
-    //    loadingVideo.Play();
-    //    loadingVideo.loopPointReached += ShowLevel1;
-    //}
-
-    public void ShowLogoTest()
-    {
-        Intro.SetActive(false);
-        Logo.SetActive(true);
-    }
-
-    public void ShowLogo(VideoPlayer vp)
+    public void ShowGameIntro(VideoPlayer vp)
     {
         vp.Stop();
         Intro.SetActive(false);
         Logo.SetActive(true);
+        var gameIntro = Logo.GetComponentInChildren<VideoPlayer>();
+        var texture = new RenderTexture(1920, 1080, 1);
+        gameIntro.targetTexture = texture;
+        gameIntro.transform.parent.GetComponentInChildren<RawImage>().texture = texture;
+
+        gameIntro.Play();
+        gameIntro.loopPointReached += ShowLogo;
     }
 
-    //public void NextLevel()
+    //public void ShowLogoTest()
     //{
-    //    switch (currentLevel)
-    //    {
-    //        case 1:
-    //            ShowIntroLevel2();
-    //            return;
-    //        case 2:
-    //            ShowIntroLevel3();
-    //            return;
-    //        case 3:
-    //            ShowIntroLevel4();
-    //            return;
-    //        case 4:
-    //            ShowEnd();
-    //            return;
-    //    }
+    //    Intro.SetActive(false);
+    //    Logo.SetActive(true);
     //}
-    
+
+    public void ShowLogo(VideoPlayer vp)
+    {
+        vp.Stop();
+        GameLogoBackground.SetActive(true);
+        //Intro.SetActive(false);
+        //Logo.SetActive(true);
+    }
 
     public void LoadSceneMain()
     {
@@ -85,6 +69,9 @@ public class WindowsManager : MonoBehaviour
         currentLevel = 1;
         Loading.SetActive(true);
         var loadingVideo = Loading.GetComponentInChildren<VideoPlayer>();
+        var texture = new RenderTexture(1920, 1080, 1);
+        loadingVideo.targetTexture = texture;
+        loadingVideo.transform.parent.GetComponentInChildren<RawImage>().texture = texture;
         loadingVideo.Play();
         StartCoroutine(LoadScene(loadingVideo, videoFinishIsSet));
     }
