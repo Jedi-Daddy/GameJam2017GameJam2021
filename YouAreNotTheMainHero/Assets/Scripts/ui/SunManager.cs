@@ -38,7 +38,7 @@ namespace Assets.Scripts.ui
             }
             SunCollection[startPosition].SetDefaultPosition(positions[startPosition]); 
             currentPosition = startPosition;
-            EventDispatcher.OnStartPosition(this, new IntEventArgs(startPosition));
+            EventDispatcher.OnSunStarted(this, new IntEventArgs(startPosition));
         }
 
         void Update()
@@ -50,7 +50,7 @@ namespace Assets.Scripts.ui
                 var nextPosition = GetNextPosition(normalizedMousePosition);
                 SunCollection[currentPosition].Dissapear();
                 SunCollection[nextPosition].Appear();
-                EventDispatcher.OnSunUpdated(this, new IntEventArgs(nextPosition, IsClockwise));
+                EventDispatcher.OnSunUpdated(this, new IntEventArgs(nextPosition));
                 currentPosition = nextPosition;
             }
         }
