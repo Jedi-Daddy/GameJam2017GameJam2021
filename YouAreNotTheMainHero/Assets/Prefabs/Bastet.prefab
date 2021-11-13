@@ -30,7 +30,7 @@ Transform:
   - {fileID: 1535954993932029798}
   m_Father: {fileID: 1358529702196444333}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -1.5600001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -15, y: 0, z: 0}
 --- !u!1 &1358529700990294580
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,7 +61,7 @@ Transform:
   - {fileID: 1535954993015727303}
   m_Father: {fileID: 1358529702196444333}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -1.5600001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -15, y: 0, z: 0}
 --- !u!1 &1358529701232953790
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +92,7 @@ Transform:
   - {fileID: 1535954993954387467}
   m_Father: {fileID: 1358529702196444333}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 1.5600001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
 --- !u!1 &1358529701661878257
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,6 +139,7 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 81dd7078ff5e9de4297d543dbb42f14a, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 81dd7078ff5e9de4297d543dbb42f14a, type: 2}
+  - {fileID: 7400000, guid: 4e03f6fc4ec3179499f24b507aa9af90, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -201,7 +202,7 @@ Transform:
   - {fileID: 1535954992626136741}
   m_Father: {fileID: 1358529702196444333}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 1.5600001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
 --- !u!1 &1358529702196444332
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +237,7 @@ Transform:
   - {fileID: 1535954994312544840}
   m_Father: {fileID: 1358529701661878263}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.312}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3}
 --- !u!1001 &1358529700317750691
 PrefabInstance:
   m_ObjectHideFlags: 0
