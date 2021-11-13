@@ -19,11 +19,15 @@ public class Rotator : MonoBehaviour
 
     public void OnSunDirectionUpdated(object sender, PositionEventArgs args)
     {
-        time = 0f;
+        if (args.Immediately)
+            transform.LookAt(args.Position);
+        else
+        {
+            time = 0f;
 
-        //transform.LookAt(args.Position);
-        Vector3 lookDirection = args.Position - transform.position;
-        rotation = Quaternion.LookRotation(lookDirection, Vector3.up);
+            Vector3 lookDirection = args.Position - transform.position;
+            rotation = Quaternion.LookRotation(lookDirection, Vector3.up);
+        }
     }
 
     private void Update()
