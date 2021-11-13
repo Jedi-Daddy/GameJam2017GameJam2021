@@ -109,7 +109,6 @@ public class WindowsManager : MonoBehaviour
         vp.Stop();
         Loading.SetActive(false);
         Level1Ui.SetActive(true);
-        Level1Ui.GetComponentInChildren<SunManager>().enableListen = true;
     }
 
     public void LoadSceneMain()
@@ -123,7 +122,6 @@ public class WindowsManager : MonoBehaviour
         loadingVideo.Stop();
         Loading.SetActive(false);
         Level1Ui.SetActive(true);
-        Level1Ui.GetComponentInChildren<SunManager>().enableListen = true;
     }
 
     public IEnumerator LoadScene()

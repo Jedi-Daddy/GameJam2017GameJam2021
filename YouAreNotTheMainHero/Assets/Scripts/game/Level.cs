@@ -13,6 +13,21 @@ public class Level : MonoBehaviour
 
     private float time;
 
+    private void OnEnable()
+    {
+        EventDispatcher.OnSunUpdated += OnSunUpdated;
+    }
+
+    private void OnDisable()
+    {
+        EventDispatcher.OnSunUpdated -= OnSunUpdated;
+    }
+
+    public void OnSunUpdated(object sender, IntEventArgs args)
+    {
+        EventDispatcher.OnSunDirectionUpdated(this, new PositionEventArgs(SpawnPoints[args.Idx].position));
+    }
+
     private void Update()
     {
         if (!AutoSpawn)

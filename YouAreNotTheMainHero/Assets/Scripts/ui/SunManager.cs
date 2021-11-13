@@ -32,9 +32,6 @@ namespace Assets.Scripts.ui
 
         public int currentPosition;
         public int startPosition = 0;
-        public bool enableListen;
-
-        public UnityEvent<int> ShadowScript;
 
         void Start()
         {
@@ -48,21 +45,20 @@ namespace Assets.Scripts.ui
             }
             SunCollection[startPosition].SetDefaultPosition(positions[startPosition]); 
             currentPosition = startPosition;
-            enableListen = false;
-            ShadowScript.Invoke(startPosition);
+            EventDispatcher.OnSunUpdated(this, new IntEventArgs(startPosition));
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetMouseButtonDown(0) && enableListen)
+            if (Input.GetMouseButtonDown(0))
             {
                 var normalizedMousePosition = new Vector3(Input.mousePosition.x / Screen.width, Input.mousePosition.y / Screen.height, 0);
 
                 var nextPosition = GetNextPosition(normalizedMousePosition);
                 SunCollection[currentPosition].Dissapear();
                 SunCollection[nextPosition].Appear();
-                ShadowScript.Invoke(nextPosition);
+                EventDispatcher.OnSunUpdated(this, new IntEventArgs(nextPosition));
                 currentPosition = nextPosition;
             }
         }
