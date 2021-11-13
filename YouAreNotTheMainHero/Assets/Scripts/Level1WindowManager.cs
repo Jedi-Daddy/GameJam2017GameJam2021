@@ -1,6 +1,7 @@
 using Assets.Scripts;
 using Assets.Scripts.ui;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level1WindowManager : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class Level1WindowManager : MonoBehaviour
     }
 
     public void RestartLevel()
-    { 
+    {
+        SceneManager.LoadScene("level1");
     }
 }
