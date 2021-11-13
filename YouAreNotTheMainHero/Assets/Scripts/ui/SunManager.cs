@@ -34,6 +34,8 @@ namespace Assets.Scripts.ui
         public int startPosition;
         public bool enableListen;
 
+        public bool IsClockwise;
+
         public UnityEvent<int> ShadowScript;
 
         void Start()
@@ -48,19 +50,19 @@ namespace Assets.Scripts.ui
             }
             SunCollection[startPosition].SetDefaultPosition(positions[startPosition]); 
             currentPosition = startPosition;
-            EventDispatcher.OnSunUpdated(this, new IntEventArgs(startPosition));
+            EventDispatcher.OnStartPosition(this, new IntEventArgs(startPosition));
         }
 
         void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && enableListen)
             {
                 var normalizedMousePosition = new Vector3(Input.mousePosition.x / Screen.width, Input.mousePosition.y / Screen.height, 0);
 
                 var nextPosition = GetNextPosition(normalizedMousePosition);
                 SunCollection[currentPosition].Dissapear();
                 SunCollection[nextPosition].Appear();
-                EventDispatcher.OnSunUpdated(this, new IntEventArgs(nextPosition));
+                EventDispatcher.OnSunUpdated(this, new IntEventArgs(nextPosition, IsClockwise));
                 currentPosition = nextPosition;
             }
         }
@@ -69,12 +71,14 @@ namespace Assets.Scripts.ui
         {
             if (mousePos.x >= 0.5)
             {
+                IsClockwise = true;
                 if (currentPosition == 6)
                     return 0;
                 return currentPosition + 1;
             }
             else
             {
+                IsClockwise = false;
                 if (currentPosition == 0)
                     return 6;
                 return currentPosition - 1;
