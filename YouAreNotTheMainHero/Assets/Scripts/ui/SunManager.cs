@@ -31,7 +31,10 @@ namespace Assets.Scripts.ui
         };
 
         public int currentPosition;
-        public int startPosition = 0;
+        public int startPosition;
+        public bool enableListen;
+
+        public UnityEvent<int> ShadowScript;
 
         void Start()
         {
@@ -48,7 +51,6 @@ namespace Assets.Scripts.ui
             EventDispatcher.OnSunUpdated(this, new IntEventArgs(startPosition));
         }
 
-        // Update is called once per frame
         void Update()
         {
             if (Input.GetMouseButtonDown(0))

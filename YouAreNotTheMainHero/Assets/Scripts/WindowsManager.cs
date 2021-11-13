@@ -3,16 +3,12 @@ using UnityEngine.Video;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Assets.Scripts;
-using UnityEngine.UI;
-using Assets.Scripts.ui;
 
 public class WindowsManager : MonoBehaviour
 {
     public GameObject Intro;
     public GameObject Logo;
     public GameObject Loading;
-    public GameObject Level1Ui;
-
 
     private int currentLevel = 0;
 
@@ -21,12 +17,10 @@ public class WindowsManager : MonoBehaviour
         //Scene main = SceneManager.GetSceneByName("main");
         //SceneManager.SetActiveScene(main);
 
-        Logo.GetComponentInChildren<ButtonScript>().ActionDelegate += ShowLoading;
-        Level1Ui = GameObject.Find("Level1Ui");
+        Logo.GetComponentInChildren<ButtonScript>().ActionDelegate += LoadSceneMain;
         //Intro.active = true;
         //Logo.active = false;
         //Loading.active = false;
-        //Level1Ui.active = false;
         //var introVideo = Intro.GetComponentInChildren<VideoPlayer>();
         //var texture = new RenderTexture(1920, 1080, 1);
         //introVideo.targetTexture = texture;
@@ -49,14 +43,6 @@ public class WindowsManager : MonoBehaviour
 
     //    loadingVideo.Play();
     //    loadingVideo.loopPointReached += ShowLevel1;
-    //}
-
-    //public void ShowLevel1(VideoPlayer vp)
-    //{
-    //    vp.Stop();
-    //    Logo.active = false;
-    //    Level1.active = true;
-    //    currentLevel = 1;
     //}
 
     public void ShowLogoTest()
@@ -90,46 +76,41 @@ public class WindowsManager : MonoBehaviour
     //            return;
     //    }
     //}
-
-    public void ShowLoading()
-    {
-        Logo.SetActive(false);
-        currentLevel = 1;
-        Loading.SetActive(true);
-        var loadingVideo = Loading.GetComponentInChildren<VideoPlayer>();
-        //var texture = new RenderTexture(1920, 1080, 1);
-        //loadingVideo.targetTexture = texture;
-        //loadingVideo.transform.parent.GetComponentInChildren<RawImage>().texture = texture;
-        loadingVideo.Play();
-        loadingVideo.loopPointReached += ShowLevel1;
-    }
-
-    public void ShowLevel1(VideoPlayer vp)
-    {
-        vp.Stop();
-        Loading.SetActive(false);
-        Level1Ui.SetActive(true);
-    }
+    
 
     public void LoadSceneMain()
     {
+        var videoFinishIsSet = false;
         Logo.SetActive(false);
         currentLevel = 1;
         Loading.SetActive(true);
         var loadingVideo = Loading.GetComponentInChildren<VideoPlayer>();
         loadingVideo.Play();
-        StartCoroutine(LoadScene());
-        loadingVideo.Stop();
-        Loading.SetActive(false);
-        Level1Ui.SetActive(true);
+        StartCoroutine(LoadScene(loadingVideo, videoFinishIsSet));
+    }
+    public void FinishLoading(VideoPlayer vp)
+    {
+        vp.Stop();
     }
 
-    public IEnumerator LoadScene()
+    public IEnumerator LoadScene(VideoPlayer vp, bool videoFinishIsSet)
     {
         var asyncLoad = SceneManager.LoadSceneAsync("level1");
-        //asyncLoad.allowSceneActivation = false;
+        asyncLoad.allowSceneActivation = false;
         while (!asyncLoad.isDone)
         {
+            if (asyncLoad.progress >= 0.9f)
+            {
+                if (!videoFinishIsSet)
+                {
+                    vp.loopPointReached += FinishLoading;
+                    videoFinishIsSet = true;
+                }
+                if (!vp.isPlaying)
+                {
+                    asyncLoad.allowSceneActivation = true;
+                }
+            }
             yield return null;
         }
     }

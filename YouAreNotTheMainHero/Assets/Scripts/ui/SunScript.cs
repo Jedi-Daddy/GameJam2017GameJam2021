@@ -15,7 +15,7 @@ namespace Assets.Scripts.ui
 
         public bool needAppearAnimation;
         public bool needDissapearAnimation;
-        private float startTime = Time.time;
+        private float startTime;
 
         private RectTransform _rectTransform;
 
