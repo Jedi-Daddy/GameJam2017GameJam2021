@@ -227,7 +227,7 @@ Transform:
   - {fileID: 53976993}
   - {fileID: 107664269}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!1001 &174825267
 PrefabInstance:
@@ -646,6 +646,7 @@ GameObject:
   - component: {fileID: 490492652}
   - component: {fileID: 490492651}
   - component: {fileID: 490492649}
+  - component: {fileID: 490492650}
   m_Layer: 5
   m_Name: Sun3
   m_TagString: Untagged
@@ -662,7 +663,7 @@ RectTransform:
   m_GameObject: {fileID: 490492647}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1445045076}
   m_RootOrder: 2
@@ -688,6 +689,22 @@ MonoBehaviour:
   Key: 2
   needAppearAnimation: 0
   needDissapearAnimation: 0
+--- !u!111 &490492650
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490492647}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2dbfb4f91654a8149ba5790bc4fdecb7, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 2dbfb4f91654a8149ba5790bc4fdecb7, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &490492651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,7 +725,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 589e6120ccfe8954da98048aa7f756fc, type: 3}
+  m_Texture: {fileID: 2800000, guid: 5eca7ba6406077840802e325bc330857, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -785,6 +802,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8063169b1ea9c4b45bd92113d3eb09f1, type: 3}
   m_PrefabInstance: {fileID: 792326272}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &816025027
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2170127829686204553, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
+      propertyPath: m_Name
+      value: Anubis
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.391877
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 467.73627
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2085.4348
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2170127829686204554, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b9097ef2f8fdfe945ab803561e926958, type: 3}
 --- !u!1001 &852794354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -921,6 +995,7 @@ GameObject:
   - component: {fileID: 1082188334}
   - component: {fileID: 1082188333}
   - component: {fileID: 1082188331}
+  - component: {fileID: 1082188332}
   m_Layer: 5
   m_Name: Sun4
   m_TagString: Untagged
@@ -937,7 +1012,7 @@ RectTransform:
   m_GameObject: {fileID: 1082188329}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1445045076}
   m_RootOrder: 3
@@ -963,6 +1038,22 @@ MonoBehaviour:
   Key: 3
   needAppearAnimation: 0
   needDissapearAnimation: 0
+--- !u!111 &1082188332
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082188329}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2dbfb4f91654a8149ba5790bc4fdecb7, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 2dbfb4f91654a8149ba5790bc4fdecb7, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &1082188333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -983,7 +1074,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 589e6120ccfe8954da98048aa7f756fc, type: 3}
+  m_Texture: {fileID: 2800000, guid: 5eca7ba6406077840802e325bc330857, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1010,6 +1101,7 @@ GameObject:
   - component: {fileID: 1092056580}
   - component: {fileID: 1092056579}
   - component: {fileID: 1092056577}
+  - component: {fileID: 1092056578}
   m_Layer: 5
   m_Name: Sun6
   m_TagString: Untagged
@@ -1026,7 +1118,7 @@ RectTransform:
   m_GameObject: {fileID: 1092056575}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1445045076}
   m_RootOrder: 5
@@ -1052,6 +1144,22 @@ MonoBehaviour:
   Key: 5
   needAppearAnimation: 0
   needDissapearAnimation: 0
+--- !u!111 &1092056578
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092056575}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2dbfb4f91654a8149ba5790bc4fdecb7, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 2dbfb4f91654a8149ba5790bc4fdecb7, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &1092056579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,7 +1180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 589e6120ccfe8954da98048aa7f756fc, type: 3}
+  m_Texture: {fileID: 2800000, guid: 5eca7ba6406077840802e325bc330857, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1241,7 +1349,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 36, y: -135, z: 0}
 --- !u!114 &1126738175
 MonoBehaviour:
@@ -1320,7 +1428,7 @@ Transform:
   - {fileID: 1242833362}
   - {fileID: 1730122044}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1161603693
 GameObject:
@@ -1334,6 +1442,7 @@ GameObject:
   - component: {fileID: 1161603698}
   - component: {fileID: 1161603697}
   - component: {fileID: 1161603695}
+  - component: {fileID: 1161603696}
   m_Layer: 5
   m_Name: Sun7
   m_TagString: Untagged
@@ -1350,7 +1459,7 @@ RectTransform:
   m_GameObject: {fileID: 1161603693}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1445045076}
   m_RootOrder: 6
@@ -1376,6 +1485,22 @@ MonoBehaviour:
   Key: 6
   needAppearAnimation: 0
   needDissapearAnimation: 0
+--- !u!111 &1161603696
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161603693}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2dbfb4f91654a8149ba5790bc4fdecb7, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 2dbfb4f91654a8149ba5790bc4fdecb7, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &1161603697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1396,7 +1521,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 589e6120ccfe8954da98048aa7f756fc, type: 3}
+  m_Texture: {fileID: 2800000, guid: 5eca7ba6406077840802e325bc330857, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1640,6 +1765,7 @@ GameObject:
   - component: {fileID: 1341708504}
   - component: {fileID: 1341708503}
   - component: {fileID: 1341708505}
+  - component: {fileID: 1341708506}
   m_Layer: 5
   m_Name: Sun1
   m_TagString: Untagged
@@ -1656,11 +1782,11 @@ RectTransform:
   m_GameObject: {fileID: 1341708501}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1445045076}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1686,7 +1812,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 589e6120ccfe8954da98048aa7f756fc, type: 3}
+  m_Texture: {fileID: 2800000, guid: 5eca7ba6406077840802e325bc330857, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1717,6 +1843,23 @@ MonoBehaviour:
   Key: 0
   needAppearAnimation: 0
   needDissapearAnimation: 0
+--- !u!111 &1341708506
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341708501}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2dbfb4f91654a8149ba5790bc4fdecb7, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: dd8416589e8c9364297990529e0084e6, type: 2}
+  - {fileID: 7400000, guid: 2dbfb4f91654a8149ba5790bc4fdecb7, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1444350940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,7 +2034,7 @@ RectTransform:
   - {fileID: 2015515101}
   - {fileID: 1330054307}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1998,7 +2141,7 @@ RectTransform:
   - {fileID: 1092056576}
   - {fileID: 1161603694}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2201,6 +2344,7 @@ GameObject:
   - component: {fileID: 1675298291}
   - component: {fileID: 1675298290}
   - component: {fileID: 1675298288}
+  - component: {fileID: 1675298289}
   m_Layer: 5
   m_Name: Sun5
   m_TagString: Untagged
@@ -2217,7 +2361,7 @@ RectTransform:
   m_GameObject: {fileID: 1675298286}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1445045076}
   m_RootOrder: 4
@@ -2243,6 +2387,22 @@ MonoBehaviour:
   Key: 4
   needAppearAnimation: 0
   needDissapearAnimation: 0
+--- !u!111 &1675298289
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675298286}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2dbfb4f91654a8149ba5790bc4fdecb7, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 2dbfb4f91654a8149ba5790bc4fdecb7, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &1675298290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2263,7 +2423,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 589e6120ccfe8954da98048aa7f756fc, type: 3}
+  m_Texture: {fileID: 2800000, guid: 5eca7ba6406077840802e325bc330857, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2382,6 +2542,7 @@ GameObject:
   - component: {fileID: 1980032551}
   - component: {fileID: 1980032550}
   - component: {fileID: 1980032548}
+  - component: {fileID: 1980032549}
   m_Layer: 5
   m_Name: Sun2
   m_TagString: Untagged
@@ -2398,7 +2559,7 @@ RectTransform:
   m_GameObject: {fileID: 1980032546}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1445045076}
   m_RootOrder: 1
@@ -2424,6 +2585,23 @@ MonoBehaviour:
   Key: 1
   needAppearAnimation: 0
   needDissapearAnimation: 0
+--- !u!111 &1980032549
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980032546}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2dbfb4f91654a8149ba5790bc4fdecb7, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: dd8416589e8c9364297990529e0084e6, type: 2}
+  - {fileID: 7400000, guid: 2dbfb4f91654a8149ba5790bc4fdecb7, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &1980032550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2444,7 +2622,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 589e6120ccfe8954da98048aa7f756fc, type: 3}
+  m_Texture: {fileID: 2800000, guid: 5eca7ba6406077840802e325bc330857, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
