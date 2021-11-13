@@ -1356,6 +1356,7 @@ MonoBehaviour:
   Key: 0
   needAppearAnimation: 0
   needDissapearAnimation: 0
+  Lock: {fileID: 163063912}
 --- !u!1 &658193579
 GameObject:
   m_ObjectHideFlags: 0
