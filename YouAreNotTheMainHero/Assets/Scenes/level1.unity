@@ -123,36 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &39600643
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 39600644}
-  m_Layer: 0
-  m_Name: point 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &39600644
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39600643}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -400, y: 10, z: 4264}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1137021110}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &53976992
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 373702578}
   m_Layer: 0
-  m_Name: point 5
+  m_Name: point 4
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -595,7 +565,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1137021110}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419404598
 GameObject:
@@ -1481,7 +1451,6 @@ MonoBehaviour:
   - {fileID: 1448916482}
   - {fileID: 288841935}
   - {fileID: 2010264845}
-  - {fileID: 39600644}
   - {fileID: 373702578}
   - {fileID: 1242833362}
   - {fileID: 1730122044}
@@ -1502,7 +1471,6 @@ Transform:
   - {fileID: 1448916482}
   - {fileID: 288841935}
   - {fileID: 2010264845}
-  - {fileID: 39600644}
   - {fileID: 373702578}
   - {fileID: 1242833362}
   - {fileID: 1730122044}
@@ -1585,7 +1553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1242833362}
   m_Layer: 0
-  m_Name: point 6
+  m_Name: point 5
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1603,7 +1571,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1137021110}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1330054306
 GameObject:
@@ -2483,7 +2451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1730122044}
   m_Layer: 0
-  m_Name: point 7
+  m_Name: point 6
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2501,7 +2469,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1137021110}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1980032546
 GameObject:
