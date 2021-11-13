@@ -11,6 +11,7 @@ public static class EventDispatcher
 
     public static EventHandler<IntEventArgs> OnHpUpdated;
     public static EventHandler<EventArgs> OnGameOver;
+    public static EventHandler<EventArgs> OnEnemyDiedByShadow;
 }
 
 
@@ -28,10 +29,10 @@ public class PositionEventArgs : EventArgs
 
 public class IntEventArgs : EventArgs
 {
-    public int Idx { get; set; }
+    public int Value { get; set; }
 
-    public IntEventArgs(int idx)
+    public IntEventArgs(int value)
     {
-        Idx = idx;
+        Value = value;
     }
 }

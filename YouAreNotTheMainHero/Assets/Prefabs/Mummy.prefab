@@ -142,7 +142,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: e1253658ee38eda4e97b664f8939dd9e, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1 &8173573548221082678
@@ -223,9 +223,9 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 955500d77e4a9744fb82cb1e6951d51f, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 955500d77e4a9744fb82cb1e6951d51f, type: 2}
+  - {fileID: 7400000, guid: 81dd7078ff5e9de4297d543dbb42f14a, type: 2}
   - {fileID: 7400000, guid: 4e03f6fc4ec3179499f24b507aa9af90, type: 2}
-  - {fileID: 0}
+  - {fileID: 7400000, guid: 955500d77e4a9744fb82cb1e6951d51f, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
