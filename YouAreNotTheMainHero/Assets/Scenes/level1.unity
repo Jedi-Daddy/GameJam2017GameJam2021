@@ -328,6 +328,22 @@ PrefabInstance:
       propertyPath: Level
       value: 
       objectReference: {fileID: 1137021109}
+    - target: {fileID: 6183183941842958791, guid: bfd9b10b5648b254ea4e6afaa2cf5abe, type: 3}
+      propertyPath: NormalDamage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737637788787262699, guid: bfd9b10b5648b254ea4e6afaa2cf5abe, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737637788787262699, guid: bfd9b10b5648b254ea4e6afaa2cf5abe, type: 3}
+      propertyPath: m_Size.z
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737637788787262699, guid: bfd9b10b5648b254ea4e6afaa2cf5abe, type: 3}
+      propertyPath: m_Center.z
+      value: 2.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8947609424206990932, guid: bfd9b10b5648b254ea4e6afaa2cf5abe, type: 3}
       propertyPath: m_Name
       value: Anubis

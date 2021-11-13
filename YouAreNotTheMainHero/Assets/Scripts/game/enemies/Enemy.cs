@@ -10,12 +10,9 @@ public class Enemy : MonoBehaviour
     private bool isDying;
     protected virtual bool IsDying => isDying;
 
-    private Animation animation;
+    private Animation[] animations;
 
-    protected virtual void DamageStarted()
-    {
-        //TryPlayAnimation("Damage");
-    }
+    protected virtual void DamageStarted() { }
 
     protected virtual void DamageStoped() { }
 
@@ -23,11 +20,12 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log($"Enemy apply damage {name} {damage}");
         HP -= damage;
+        TryPlayAnimation("Damage");
     }
 
     protected virtual void Start()
     {
-        animation = GetComponent<Animation>();
+        animations = GetComponentsInChildren<Animation>();
     }
 
     protected virtual void Update()
@@ -95,7 +93,13 @@ public class Enemy : MonoBehaviour
 
     private bool TryPlayAnimation(string name)
     {
-        var clip = animation.GetClip(name);
-        return clip != null && animation.Play(name);
+        foreach(var animation in animations)
+        {
+            var clip = animation.GetClip(name);
+            if (clip != null && animation.Play(name))
+                return true;
+        }
+
+        return false;
     }
  }

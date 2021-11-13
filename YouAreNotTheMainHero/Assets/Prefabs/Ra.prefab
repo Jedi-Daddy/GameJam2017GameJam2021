@@ -153,7 +153,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: e1253658ee38eda4e97b664f8939dd9e, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1001 &5449150512920431037
@@ -469,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 7400000, guid: 81dd7078ff5e9de4297d543dbb42f14a, type: 2}
     - target: {fileID: 7333857477382904456, guid: 98b90487fbc2b01438c1d28d3148bb44, type: 3}
       propertyPath: m_Animations.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7333857477382904456, guid: 98b90487fbc2b01438c1d28d3148bb44, type: 3}
       propertyPath: m_Animations.Array.data[0]

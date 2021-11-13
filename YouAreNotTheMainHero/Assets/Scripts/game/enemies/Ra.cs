@@ -16,6 +16,8 @@ public class Ra : Enemy
     {
         base.Start();
 
+        HP = int.MaxValue;
+
         startScale = transform.localScale;
     }
 
@@ -57,6 +59,4 @@ public class Ra : Enemy
         direction = 1;
         speed = IncSpeed;
     }
-
-    protected override void ApplyDamag(int damage) { }
 }
