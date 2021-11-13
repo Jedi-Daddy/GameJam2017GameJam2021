@@ -12,8 +12,10 @@ public class Level1WindowManager : MonoBehaviour
     public GameObject MenuButton;
     public GameObject InfoButton;
     public GameObject InfoUi;
+    public GameObject GameOverUi;
     public Text EnemyDestroyTest;
     public Text MenuEnemyDestroyTest;
+    public Text GameOverEnemyDestroyTest;
 
     public long EnemyDestroyed = 0;
 
@@ -21,9 +23,14 @@ public class Level1WindowManager : MonoBehaviour
     {
         Menu.SetActive(false);
         InfoUi.SetActive(false);
+        GameOverUi.SetActive(false);
         Menu.GetComponentInChildren<ButtonScriptExit>().ActionDelegate += ExitGame;
         Menu.GetComponentInChildren<ButtonScriptRestart>().ActionDelegate += RestartLevel;
         Menu.GetComponentInChildren<ButtonScriptHideMenu>().ActionDelegate += HideMenu;
+
+        GameOverUi.GetComponentInChildren<ButtonScriptExit>().ActionDelegate += ExitGame;
+        GameOverUi.GetComponentInChildren<ButtonScriptRestart>().ActionDelegate += RestartLevel;
+
         InfoUi.GetComponentInChildren<ButtonScriptHideMenu>().ActionDelegate += HideInfo;
         MenuButton.GetComponent<ButtonScript>().ActionDelegate += ShowMenu;
         InfoButton.GetComponent<ButtonScript>().ActionDelegate += ShowInfo;
@@ -87,7 +94,10 @@ public class Level1WindowManager : MonoBehaviour
 
     public void ShowGameOver(object sender, EventArgs args)
     {
-        ShowMenu();
+        Time.timeScale = 0f;
+        Level1Ui.GetComponentInChildren<SunManager>().enableListen = false;
+        GameOverEnemyDestroyTest.text = EnemyDestroyed.ToString();
+        GameOverUi.SetActive(true);
     }
 
     public void UpdateEnemyDestroyedCount(object sender, EventArgs args)
