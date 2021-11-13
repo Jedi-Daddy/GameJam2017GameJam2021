@@ -8,6 +8,9 @@ public static class EventDispatcher
     public static EventHandler<PositionEventArgs> OnSunDirectionUpdated;
     public static EventHandler<IntEventArgs> OnStartPosition;
     public static EventHandler<PositionEventArgs> OnStarDirectiontPosition;
+
+    public static EventHandler<IntEventArgs> OnHpUpdated;
+    public static EventHandler<EventArgs> OnGameOver;
 }
 
 
@@ -26,7 +29,6 @@ public class PositionEventArgs : EventArgs
 public class IntEventArgs : EventArgs
 {
     public int Idx { get; set; }
-    public bool IsClockwise { get; set; }
 
     public IntEventArgs(int idx)
     {
