@@ -102,6 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8173573547916999365}
+  - component: {fileID: 6782469074050914409}
   m_Layer: 0
   m_Name: Tors
   m_TagString: Untagged
@@ -128,6 +129,22 @@ Transform:
   m_Father: {fileID: 8173573549058882146}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &6782469074050914409
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8173573547916999366}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e1253658ee38eda4e97b664f8939dd9e, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e1253658ee38eda4e97b664f8939dd9e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &8173573548221082678
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +225,7 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 955500d77e4a9744fb82cb1e6951d51f, type: 2}
   - {fileID: 7400000, guid: 4e03f6fc4ec3179499f24b507aa9af90, type: 2}
-  - {fileID: 7400000, guid: e1253658ee38eda4e97b664f8939dd9e, type: 2}
+  - {fileID: 0}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0

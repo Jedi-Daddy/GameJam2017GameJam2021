@@ -137,6 +137,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 75444905928389317}
+--- !u!111 &1056860275456087517
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2809942769536216477}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: e1253658ee38eda4e97b664f8939dd9e, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: e1253658ee38eda4e97b664f8939dd9e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &7262916668030095764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -650,7 +666,7 @@ PrefabInstance:
     - target: {fileID: 7333857477382904456, guid: 98b90487fbc2b01438c1d28d3148bb44, type: 3}
       propertyPath: m_Animations.Array.data[2]
       value: 
-      objectReference: {fileID: 7400000, guid: e1253658ee38eda4e97b664f8939dd9e, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98b90487fbc2b01438c1d28d3148bb44, type: 3}
 --- !u!1 &2816393937138123898 stripped
@@ -661,6 +677,11 @@ GameObject:
 --- !u!111 &75444905928389317 stripped
 Animation:
   m_CorrespondingSourceObject: {fileID: 7333857477382904456, guid: 98b90487fbc2b01438c1d28d3148bb44, type: 3}
+  m_PrefabInstance: {fileID: 7262916669339166797}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2809942769536216477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4770996685979207120, guid: 98b90487fbc2b01438c1d28d3148bb44, type: 3}
   m_PrefabInstance: {fileID: 7262916669339166797}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &9065296199732712280 stripped
