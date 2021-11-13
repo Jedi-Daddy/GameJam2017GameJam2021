@@ -12,8 +12,10 @@ public class Ra : Enemy
 
     protected override bool IsDying => transform.localScale.sqrMagnitude < 4500f;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+
         startScale = transform.localScale;
     }
 
@@ -42,12 +44,16 @@ public class Ra : Enemy
 
     protected override void DamageStarted()
     {
+        base.DamageStarted();
+
         direction = -1;
         speed = DecSpeed;
     }
 
     protected override void DamageStoped()
     {
+        base.DamageStoped();
+
         direction = 1;
         speed = IncSpeed;
     }

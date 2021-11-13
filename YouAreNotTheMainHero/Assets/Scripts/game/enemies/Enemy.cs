@@ -10,7 +10,12 @@ public class Enemy : MonoBehaviour
     private bool isDying;
     protected virtual bool IsDying => isDying;
 
-    protected virtual void DamageStarted() { }
+    private Animation animation;
+
+    protected virtual void DamageStarted()
+    {
+        //TryPlayAnimation("Damage");
+    }
 
     protected virtual void DamageStoped() { }
 
@@ -18,6 +23,11 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log($"Enemy apply damage {name} {damage}");
         HP -= damage;
+    }
+
+    protected virtual void Start()
+    {
+        animation = GetComponent<Animation>();
     }
 
     protected virtual void Update()
@@ -74,14 +84,18 @@ public class Enemy : MonoBehaviour
     {
         isDying = true;
 
-        var animation = GetComponent<Animation>();
-        var clip = animation.GetClip("Death");
-        if (clip != null && animation.Play("Death"))
+        if (TryPlayAnimation("Death"))
         {
             GetComponent<Collider>().enabled = false;
             yield return new WaitForSeconds(1.5f);
         }
 
         Destroy(gameObject);
+    }
+
+    private bool TryPlayAnimation(string name)
+    {
+        var clip = animation.GetClip(name);
+        return clip != null && animation.Play(name);
     }
  }
