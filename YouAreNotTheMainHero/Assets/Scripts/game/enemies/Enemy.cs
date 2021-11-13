@@ -7,13 +7,28 @@ public class Enemy : MonoBehaviour
     public int HP = 20;
     public int Damage = 10;
 
-    private void Update()
+    private bool isDying;
+    protected virtual bool IsDying => isDying;
+
+    protected virtual void DamageStarted() { }
+
+    protected virtual void DamageStoped() { }
+
+    protected virtual void ApplyDamag(int damage)
+    {
+        HP -= damage;
+    }
+
+    protected virtual void Update()
     {
         Move();
     }
 
     private void Move()
     {
+        if (IsDying)
+            return;
+
         var amountToMove = Speed * Time.deltaTime;
         transform.Translate(Vector3.forward * amountToMove);
     }
@@ -34,6 +49,7 @@ public class Enemy : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         StopAllCoroutines();
+        DamageStoped();
     }
 
     private IEnumerator ApplyDamage(float delay, float interval, int damage)
@@ -41,9 +57,11 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(delay);
         Debug.Log($"Enemy start damage {name}");
 
+        DamageStarted();
+
         while (HP > 0)
         {
-            HP -= damage;
+            ApplyDamag(damage);
             Debug.Log($"Enemy apply damage {name} {damage}");
             yield return new WaitForSeconds(interval);
         }
@@ -52,8 +70,10 @@ public class Enemy : MonoBehaviour
         Debug.Log($"Enemy dead {name}");
     }
 
-    private IEnumerator Die()
+    public IEnumerator Die()
     {
+        isDying = true;
+
         var animation = GetComponent<Animation>();
         var clip = animation.GetClip("Death");
         if (clip != null && animation.Play("Death"))
