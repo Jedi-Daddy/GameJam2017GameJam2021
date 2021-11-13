@@ -24,14 +24,15 @@ public class Level : MonoBehaviour
         EventDispatcher.OnSunUpdated -= OnSunUpdated;
         EventDispatcher.OnStartPosition -= OnStartPosition;
     }
+
     public void OnStartPosition(object sender, IntEventArgs args)
     {
-        EventDispatcher.OnStarDirectiontPosition(this, new PositionEventArgs(SpawnPoints[args.Idx].position));
+        EventDispatcher.OnStarDirectiontPosition?.Invoke(this, new PositionEventArgs(SpawnPoints[args.Idx].position));
     }
 
     public void OnSunUpdated(object sender, IntEventArgs args)
     {
-        EventDispatcher.OnSunDirectionUpdated(this, new PositionEventArgs(SpawnPoints[args.Idx].position));
+        EventDispatcher.OnSunDirectionUpdated?.Invoke(this, new PositionEventArgs(SpawnPoints[args.Idx].position));
     }
 
     private void Update()
