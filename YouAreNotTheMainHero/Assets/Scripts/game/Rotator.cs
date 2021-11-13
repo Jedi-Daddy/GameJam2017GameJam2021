@@ -5,7 +5,7 @@ public class Rotator : MonoBehaviour
     public float period = 5f;
 
     private Quaternion rotation;
-    private float time;
+    private float time = 5f;
 
     private void OnEnable()
     {
@@ -32,7 +32,7 @@ public class Rotator : MonoBehaviour
 
     private void Update()
     {
-        if (time > period)
+        if (time >= period)
             return;
 
         time += Time.deltaTime;
