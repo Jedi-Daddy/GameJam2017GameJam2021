@@ -48,7 +48,20 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(interval);
         }
 
-        Destroy(gameObject);
+        StartCoroutine(Die());
         Debug.Log($"Enemy dead {name}");
     }
-}
+
+    private IEnumerator Die()
+    {
+        var animation = GetComponent<Animation>();
+        var clip = animation.GetClip("Death");
+        if (clip != null && animation.Play("Death"))
+        {
+            GetComponent<Collider>().enabled = false;
+            yield return new WaitForSeconds(1.5f);
+        }
+
+        Destroy(gameObject);
+    }
+ }
