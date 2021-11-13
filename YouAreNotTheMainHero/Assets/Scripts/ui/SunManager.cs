@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -25,6 +26,18 @@ namespace Assets.Scripts.ui
         public bool IsClockwise;
 
         public UnityEvent<int> ShadowScript;
+
+        private void OnEnable()
+        {
+            EventDispatcher.OnSunLock += OnSunLock;
+            EventDispatcher.OnSunUnlock += OnSunUnlock;
+        }
+
+        private void OnDisable()
+        {
+            EventDispatcher.OnSunLock -= OnSunLock;
+            EventDispatcher.OnSunUnlock -= OnSunUnlock;
+        }
 
         void Start()
         {
@@ -72,6 +85,18 @@ namespace Assets.Scripts.ui
                 return currentPosition - 1;
 
             }
+        }
+
+        public void OnSunLock(object sender, EventArgs args)
+        {
+            SunCollection[currentPosition].Lock.SetActive(true);
+            enableListen = false;
+        }
+
+        public void OnSunUnlock(object sender, EventArgs args)
+        {
+            SunCollection[currentPosition].Lock.SetActive(false);
+            enableListen = true;
         }
     }
 }

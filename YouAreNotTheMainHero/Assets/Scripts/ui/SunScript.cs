@@ -18,6 +18,7 @@ namespace Assets.Scripts.ui
 
         private RectTransform _rectTransform;
 
+        public GameObject Lock;
 
         public void Initialize(Vector3 activePosition)
         {
@@ -26,6 +27,7 @@ namespace Assets.Scripts.ui
             _rectTransform = GetComponent<RectTransform>();
             _rectTransform.localPosition = DefaultPosition;
             journeyLength = Vector3.Distance(activePosition, DefaultPosition);
+            Lock.SetActive(false);
         }
 
         public void Update()

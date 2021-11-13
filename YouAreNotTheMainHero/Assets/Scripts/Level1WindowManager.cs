@@ -21,6 +21,7 @@ public class Level1WindowManager : MonoBehaviour
 
     void Start()
     {
+        Level1Ui.SetActive(true);
         Menu.SetActive(false);
         InfoUi.SetActive(false);
         GameOverUi.SetActive(false);

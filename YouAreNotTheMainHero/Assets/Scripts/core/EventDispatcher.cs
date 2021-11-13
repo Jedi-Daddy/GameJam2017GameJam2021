@@ -13,6 +13,10 @@ public static class EventDispatcher
     public static EventHandler<EventArgs> OnGameOver;
     public static EventHandler<EventArgs> OnEnemyDiedByShadow;
     public static EventHandler<IntEventArgs> OnScoreUpdated;
+
+
+    public static EventHandler<EventArgs> OnSunLock;
+    public static EventHandler<EventArgs> OnSunUnlock;
 }
 
 

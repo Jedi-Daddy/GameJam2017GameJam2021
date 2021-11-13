@@ -557,6 +557,7 @@ MonoBehaviour:
   Key: 2
   needAppearAnimation: 0
   needDissapearAnimation: 0
+  Lock: {fileID: 251487356}
 --- !u!1 &235199359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,6 +1036,7 @@ MonoBehaviour:
   Key: 4
   needAppearAnimation: 0
   needDissapearAnimation: 0
+  Lock: {fileID: 460067878}
 --- !u!1 &490492647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,6 +1640,7 @@ MonoBehaviour:
   Key: 1
   needAppearAnimation: 0
   needDissapearAnimation: 0
+  Lock: {fileID: 1165990211}
 --- !u!1001 &792326272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4141,6 +4144,7 @@ MonoBehaviour:
   Key: 5
   needAppearAnimation: 0
   needDissapearAnimation: 0
+  Lock: {fileID: 1424841145}
 --- !u!1 &1643221749
 GameObject:
   m_ObjectHideFlags: 0
@@ -5007,6 +5011,7 @@ MonoBehaviour:
   Key: 3
   needAppearAnimation: 0
   needDissapearAnimation: 0
+  Lock: {fileID: 1615563219}
 --- !u!1 &1954290850
 GameObject:
   m_ObjectHideFlags: 0
