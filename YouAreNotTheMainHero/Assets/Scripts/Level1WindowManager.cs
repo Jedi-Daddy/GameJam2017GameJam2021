@@ -8,13 +8,29 @@ public class Level1WindowManager : MonoBehaviour
     public GameObject Menu;
     public GameObject Level1Ui;
     public GameObject MenuButton;
+    public GameObject InfoButton;
+    public GameObject InfoUi;
     void Start()
     {
         Menu.SetActive(false);
+        InfoUi.SetActive(false);
         Menu.GetComponentInChildren<ButtonScriptExit>().ActionDelegate += ExitGame;
         Menu.GetComponentInChildren<ButtonScriptRestart>().ActionDelegate += RestartLevel;
         Menu.GetComponentInChildren<ButtonScriptHideMenu>().ActionDelegate += HideMenu;
+        InfoUi.GetComponentInChildren<ButtonScriptHideMenu>().ActionDelegate += HideInfo;
         MenuButton.GetComponent<ButtonScript>().ActionDelegate += ShowMenu;
+        InfoButton.GetComponent<ButtonScript>().ActionDelegate += ShowInfo;
+        Level1Ui.GetComponentInChildren<SunManager>().enableListen = true;
+    }
+    public void ShowInfo()
+    {
+        Level1Ui.GetComponentInChildren<SunManager>().enableListen = false;
+        InfoUi.SetActive(true);
+    }
+
+    public void HideInfo()
+    {
+        InfoUi.SetActive(false);
         Level1Ui.GetComponentInChildren<SunManager>().enableListen = true;
     }
     public void ShowMenu()

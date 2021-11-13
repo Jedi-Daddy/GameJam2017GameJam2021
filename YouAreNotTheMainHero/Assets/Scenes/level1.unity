@@ -427,6 +427,8 @@ MonoBehaviour:
   Menu: {fileID: 1664468050}
   Level1Ui: {fileID: 1445045072}
   MenuButton: {fileID: 2090394097}
+  InfoButton: {fileID: 1360543261}
+  InfoUi: {fileID: 1674086903}
 --- !u!114 &235199364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2824,7 +2826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1674086904
 MonoBehaviour:
   m_ObjectHideFlags: 0

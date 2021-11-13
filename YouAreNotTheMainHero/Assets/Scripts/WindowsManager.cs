@@ -64,7 +64,6 @@ public class WindowsManager : MonoBehaviour
 
     public void LoadSceneMain()
     {
-        var videoFinishIsSet = false;
         Logo.SetActive(false);
         currentLevel = 1;
         Loading.SetActive(true);
@@ -73,7 +72,13 @@ public class WindowsManager : MonoBehaviour
         loadingVideo.targetTexture = texture;
         loadingVideo.transform.parent.GetComponentInChildren<RawImage>().texture = texture;
         loadingVideo.Play();
-        StartCoroutine(LoadScene(loadingVideo, videoFinishIsSet));
+        loadingVideo.loopPointReached += EnterFirstLoop;
+    }
+
+    public void EnterFirstLoop(VideoPlayer vp)
+    {
+        var videoFinishIsSet = false;
+        StartCoroutine(LoadScene(vp, videoFinishIsSet));
     }
     public void FinishLoading(VideoPlayer vp)
     {
