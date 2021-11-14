@@ -339,7 +339,7 @@ MonoBehaviour:
   BasePoint: {fileID: 0}
   Target: {fileID: 0}
   KillToHeal: 10
-  HealingPower: 20
+  HealingPower: 10
   Speed: 250
   Source: {fileID: 0}
 --- !u!1001 &1414560930008452283
