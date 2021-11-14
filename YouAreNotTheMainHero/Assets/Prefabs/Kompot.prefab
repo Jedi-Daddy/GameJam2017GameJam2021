@@ -239,8 +239,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9e05ec917680df84ea42a32c5b0d6738, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.516
+  m_PlayOnAwake: 0
+  m_Volume: 0.323
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -341,6 +341,7 @@ MonoBehaviour:
   KillToHeal: 10
   HealingPower: 20
   Speed: 250
+  Source: {fileID: 0}
 --- !u!1001 &1414560930008452283
 PrefabInstance:
   m_ObjectHideFlags: 0
