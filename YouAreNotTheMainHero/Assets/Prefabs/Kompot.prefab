@@ -338,7 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BasePoint: {fileID: 0}
   Target: {fileID: 0}
-  KillToHeal: 10
+  KillToHeal: 20
   HealingPower: 10
   Speed: 250
   Source: {fileID: 0}
