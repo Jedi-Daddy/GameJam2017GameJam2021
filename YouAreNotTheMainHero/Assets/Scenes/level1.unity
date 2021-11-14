@@ -937,7 +937,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288841934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2574.3, y: 10, z: 2142.8}
+  m_LocalPosition: {x: -1574.3, y: 10, z: 2142.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1137021110}
@@ -1540,6 +1540,10 @@ PrefabInstance:
       propertyPath: BasePoint
       value: 
       objectReference: {fileID: 299085433}
+    - target: {fileID: 673729135, guid: f3383ae6c9abf3d4aabc054d7ba1938f, type: 3}
+      propertyPath: KillToHeal
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1778548960797227829, guid: f3383ae6c9abf3d4aabc054d7ba1938f, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -3108,7 +3112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242833361}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1770, y: 10, z: 2142.3}
+  m_LocalPosition: {x: 970, y: 10, z: 2142.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1137021110}
