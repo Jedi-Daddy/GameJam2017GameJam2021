@@ -3531,7 +3531,7 @@ MonoBehaviour:
   startPosition: 1
   enableListen: 0
   IsClockwise: 0
-  ClickThreshold: 0.5
+  ClickThreshold: 0.2
 --- !u!1 &1448916481
 GameObject:
   m_ObjectHideFlags: 0
