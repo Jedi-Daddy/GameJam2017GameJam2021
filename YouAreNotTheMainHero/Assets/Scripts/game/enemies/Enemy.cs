@@ -13,15 +13,24 @@ public class Enemy : MonoBehaviour
 
     private Animation[] animations;
 
-    protected virtual void DamageStarted() { }
+    protected virtual void OnShadowEnter() { }
 
-    protected virtual void DamageStoped() { }
+    protected virtual void OnDamageStarted() { }
 
-    protected virtual void ApplyDamag(int damage)
+    protected virtual void OnDamageStoped() { }
+
+    protected virtual void OnApplyDamag(int damage)
     {
         Debug.Log($"Enemy apply damage {name} {damage}");
         HP -= damage;
         TryPlayAnimation("Damage");
+    }
+
+    protected virtual void OnDie() { }
+
+    protected virtual void OnDied()
+    {
+        Destroy(gameObject);
     }
 
     protected virtual void Start()
@@ -47,7 +56,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.tag == "Obelisk")
         {
-            Destroy(gameObject);
+            OnDied();
         } 
         else if (other.gameObject.tag == "Shadow")
         {
@@ -59,19 +68,21 @@ public class Enemy : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         StopAllCoroutines();
-        DamageStoped();
+        OnDamageStoped();
     }
 
-    private IEnumerator ShadowEnter(Shadow shadow)
+    protected IEnumerator ShadowEnter(Shadow shadow)
     {
+        OnShadowEnter();
+
         yield return new WaitForSeconds(shadow.DamageDelay);
         Debug.Log($"Enemy start damage {name}");
 
-        DamageStarted();
+        OnDamageStarted();
 
         while (HP > 0)
         {
-            ApplyDamag(shadow.Damage);
+            OnApplyDamag(shadow.Damage);
             yield return new WaitForSeconds(shadow.DamageInterval);
         }
 
@@ -81,15 +92,15 @@ public class Enemy : MonoBehaviour
 
     protected IEnumerator Die()
     {
+        OnDie();
+
         isDying = true;
+        GetComponent<Collider>().enabled = false;
 
         if (TryPlayAnimation("Death"))
-        {
-            GetComponent<Collider>().enabled = false;
             yield return new WaitForSeconds(1.5f);
-        }
 
-        Destroy(gameObject);
+        OnDied();
         EventDispatcher.OnEnemyDiedByShadow.Invoke(this, new EventArgs());
     }
 

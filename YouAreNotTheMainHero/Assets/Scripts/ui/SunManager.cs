@@ -25,7 +25,11 @@ namespace Assets.Scripts.ui
 
         public bool IsClockwise;
 
-        public UnityEvent<int> ShadowScript;
+        public float ClickThreshold = 0.5f;
+
+        private bool CanClick => Time.time - lastClickTime > ClickThreshold;
+
+        private float lastClickTime;
 
         private void OnEnable()
         {
@@ -56,7 +60,7 @@ namespace Assets.Scripts.ui
 
         void Update()
         {
-            if (Input.GetMouseButtonDown(0) && enableListen)
+            if (Input.GetMouseButtonDown(0) && enableListen && CanClick)
             {
                 var normalizedMousePosition = new Vector3(Input.mousePosition.x / Screen.width, Input.mousePosition.y / Screen.height, 0);
 
@@ -65,6 +69,8 @@ namespace Assets.Scripts.ui
                 SunCollection[nextPosition].Appear();
                 EventDispatcher.OnSunUpdated(this, new IntEventArgs(nextPosition));
                 currentPosition = nextPosition;
+
+                lastClickTime = Time.time;
             }
         }
 
